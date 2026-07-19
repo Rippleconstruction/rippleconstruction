@@ -100,7 +100,7 @@ function Contact() {
                       className="mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground outline-none focus:border-[var(--timber)]"
                     >
                       <option value="">Select a service…</option>
-                      {["Timber Framing", "Wall & Roof Framing", "Structural Carpentry", "External Cladding", "Internal Fit-Off", "Decks & Outdoor Structures", "Renovations", "General Carpentry"].map((o) => (
+                      {["Timber Framing", "Wall & Roof Framing", "Structural Carpentry", "External Cladding", "Internal Fit-Off", "Decks & Outdoor Structures", "Fencing", "Retaining Walls", "Renovations", "General Carpentry"].map((o) => (
                         <option key={o}>{o}</option>
                       ))}
                     </select>
