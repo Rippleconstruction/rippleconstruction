@@ -46,11 +46,12 @@ function Services() {
           <Reveal>
             <span className="eyebrow"><span className="h-px w-8 bg-[var(--timber)]" />Services</span>
             <h1 className="mt-4 font-display text-5xl md:text-7xl font-bold leading-[1] max-w-4xl">
-              Full-scope carpentry for builders & developers.
+              Full-scope carpentry for builders, developers & homeowners.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-              From framing packages to detailed fit-off, Ripple Construction covers every
-              carpentry stage of your build with one accountable subcontractor.
+              From framing packages to detailed fit-off, fencing and retaining walls, Ripple
+              Construction covers every carpentry stage of your build with one accountable
+              subcontractor.
             </p>
           </Reveal>
         </div>
