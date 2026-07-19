@@ -18,8 +18,9 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-6 max-w-md text-sm text-white/70 leading-relaxed">
-            Reliable carpentry subcontractors delivering framing, cladding, fit-off and
-            structural carpentry across Brisbane, Moreton Bay and the Sunshine Coast.
+            Reliable carpentry subcontractors delivering framing, cladding, fit-off, fencing,
+            retaining walls and structural carpentry across Brisbane, Moreton Bay and the Sunshine
+            Coast — for builders, developers and homeowners.
           </p>
         </div>
 

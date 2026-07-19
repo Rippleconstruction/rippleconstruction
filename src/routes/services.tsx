@@ -5,6 +5,8 @@ import roof from "@/assets/roof-framing.jpg";
 import cladding from "@/assets/cladding.jpg";
 import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
+import fencing from "@/assets/fencing.jpg";
+import retainingWall from "@/assets/retaining-wall.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
 import hero from "@/assets/hero.jpg";
@@ -13,8 +15,8 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Carpentry Services — Framing, Cladding, Fit-Off & Structural | Ripple Construction" },
-      { name: "description", content: "Carpentry subcontractor services in QLD: timber framing, wall & roof framing, structural carpentry, external cladding, internal fit-off, decks and renovations." },
+      { title: "Carpentry Services — Framing, Cladding, Fencing & Retaining Walls | Ripple Construction" },
+      { name: "description", content: "Carpentry subcontractor services in QLD: timber framing, wall & roof framing, structural carpentry, external cladding, internal fit-off, decks, fencing, retaining walls and renovations." },
       { property: "og:title", content: "Carpentry Services — Ripple Construction" },
       { property: "og:url", content: "/services" },
     ],
@@ -30,6 +32,8 @@ const SERVICES = [
   { title: "External Cladding", body: "Weatherboard, composite, timber-look and architectural cladding — installed clean and straight.", img: cladding },
   { title: "Internal Fixing & Fit-Off", body: "Doors, skirtings, architraves, linings and joinery installation with a sharp finish.", img: fitoff },
   { title: "Decks & Outdoor Structures", body: "Hardwood decks, pergolas, screens and outdoor timber structures built to last.", img: deck },
+  { title: "Fencing", body: "Timber fencing, slat screens, boundary fences and privacy walls — built straight and built to last.", img: fencing },
+  { title: "Retaining Walls", body: "Engineered timber sleeper and concrete retaining walls that hold the line and look sharp.", img: retainingWall },
   { title: "Renovations", body: "Carpentry-led renovations and extensions — from Queenslander character work to modern rebuilds.", img: project3 },
   { title: "General Carpentry", body: "Site carpentry, temporary works, remedial repairs and everything in between.", img: hero },
 ];
@@ -42,11 +46,12 @@ function Services() {
           <Reveal>
             <span className="eyebrow"><span className="h-px w-8 bg-[var(--timber)]" />Services</span>
             <h1 className="mt-4 font-display text-5xl md:text-7xl font-bold leading-[1] max-w-4xl">
-              Full-scope carpentry for builders & developers.
+              Full-scope carpentry for builders, developers & homeowners.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-              From framing packages to detailed fit-off, Ripple Construction covers every
-              carpentry stage of your build with one accountable subcontractor.
+              From framing packages to detailed fit-off, fencing and retaining walls, Ripple
+              Construction covers every carpentry stage of your build with one accountable
+              subcontractor.
             </p>
           </Reveal>
         </div>

@@ -5,6 +5,8 @@ import framing from "@/assets/framing.jpg";
 import cladding from "@/assets/cladding.jpg";
 import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
+import fencing from "@/assets/fencing.jpg";
+import retainingWall from "@/assets/retaining-wall.jpg";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
@@ -18,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Reliable carpentry subcontractors for builders and developers. Timber framing, cladding, fit-off and structural carpentry across Brisbane, Moreton Bay and Sunshine Coast.",
+          "Reliable carpentry subcontractors for builders, developers and homeowners. Timber framing, cladding, fit-off, fencing, retaining walls and structural carpentry across Brisbane, Moreton Bay and Sunshine Coast.",
       },
       { property: "og:title", content: "Ripple Construction — Carpentry Subcontractors QLD" },
       { property: "og:url", content: "/" },
@@ -29,7 +31,7 @@ export const Route = createFileRoute("/")({
 });
 
 const VALUES = [
-  { icon: ShieldCheck, title: "Reliable & Professional", body: "Trusted by builders and developers to show up, communicate and deliver — every project, every time." },
+  { icon: ShieldCheck, title: "Reliable & Professional", body: "Trusted by builders, developers and homeowners to show up, communicate and deliver — every project, every time." },
   { icon: Hammer, title: "Quality Workmanship", body: "Qualified carpenters producing precise, code-compliant work you can put your name to." },
   { icon: Clock, title: "On-Time Delivery", body: "Efficient scheduling and disciplined crews keep your program moving without surprises." },
 ];
@@ -39,6 +41,8 @@ const SERVICES = [
   { title: "External Cladding", body: "Weatherboard, composite and architectural cladding.", img: cladding, to: "/services" as const },
   { title: "Internal Fit-Off", body: "Doors, skirtings, architraves and joinery installation.", img: fitoff, to: "/services" as const },
   { title: "Decks & Structures", body: "Hardwood decks, pergolas and outdoor timber structures.", img: deck, to: "/services" as const },
+  { title: "Fencing", body: "Timber, slat and boundary fencing built straight and built to last.", img: fencing, to: "/services" as const },
+  { title: "Retaining Walls", body: "Engineered sleeper and concrete retaining walls that hold the line.", img: retainingWall, to: "/services" as const },
 ];
 
 const PROJECTS = [
@@ -82,8 +86,9 @@ function Home() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 max-w-2xl text-lg md:text-xl text-white/80 leading-relaxed">
-              Delivering high-quality framing, cladding, fit-off and structural carpentry
-              across South East Queensland.
+              Delivering high-quality framing, cladding, fit-off, fencing, retaining walls and
+              structural carpentry across South East Queensland — for builders, developers and
+              homeowners.
             </p>
           </Reveal>
           <Reveal delay={300}>
@@ -153,12 +158,13 @@ function Home() {
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Ripple Construction is a dedicated carpentry subcontractor working with builders,
-              developers and construction companies across South East Queensland. From large-scale
-              framing packages to detailed fit-off work, we bring the same standards to every site:
-              clean workmanship, tight schedules and clear communication.
+              developers, construction companies and homeowners across South East Queensland. From
+              large-scale framing packages to fencing, retaining walls and detailed fit-off work,
+              we bring the same standards to every site: clean workmanship, tight schedules and
+              clear communication.
             </p>
             <ul className="mt-6 space-y-3">
-              {["Qualified, safety-focused carpenters", "Framing, cladding, fit-off & structural work", "Servicing Brisbane, Moreton Bay & Sunshine Coast"].map((t) => (
+              {["Qualified, safety-focused carpenters", "Framing, cladding, fit-off, fencing & retaining walls", "Servicing Brisbane, Moreton Bay & Sunshine Coast"].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-foreground">
                   <CheckCircle2 className="h-5 w-5 text-[var(--timber)] mt-0.5 shrink-0" />
                   <span>{t}</span>
@@ -185,7 +191,7 @@ function Home() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
                 <Link to={s.to} className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-[var(--shadow-elegant)] transition-all duration-300 hover:-translate-y-1">

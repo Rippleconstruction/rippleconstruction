@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Ripple Construction — QLD Carpentry Subcontractors" },
-      { name: "description", content: "Ripple Construction is a dependable carpentry subcontractor committed to quality workmanship, safety and long-term relationships with builders across South East Queensland." },
+      { name: "description", content: "Ripple Construction is a dependable carpentry subcontractor committed to quality workmanship, safety and long-term relationships with builders, developers and homeowners across South East Queensland." },
       { property: "og:title", content: "About Ripple Construction" },
       { property: "og:url", content: "/about" },
     ],
@@ -36,7 +36,7 @@ function About() {
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
               Ripple Construction is a South East Queensland carpentry subcontractor working
-              alongside builders and developers who care about quality and program.
+              alongside builders, developers and homeowners who care about quality and program.
             </p>
           </Reveal>
         </div>
@@ -65,9 +65,9 @@ function About() {
                 workmanship that passes inspection first time.
               </p>
               <p>
-                Today we work with some of the most respected builders and developers across
-                Brisbane, Moreton Bay and the Sunshine Coast — and most of our work comes from
-                repeat clients and referrals.
+                Today we work with respected builders, developers and homeowners across Brisbane,
+                Moreton Bay and the Sunshine Coast — and most of our work comes from repeat
+                clients and referrals.
               </p>
             </div>
           </Reveal>
