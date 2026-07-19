@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Ripple Construction — QLD Carpentry Subcontractors" },
-      { name: "description", content: "Ripple Construction is a dependable carpentry subcontractor committed to quality workmanship, safety and long-term relationships with builders across South East Queensland." },
+      { name: "description", content: "Ripple Construction is a dependable carpentry subcontractor committed to quality workmanship, safety and long-term relationships with builders, developers and homeowners across South East Queensland." },
       { property: "og:title", content: "About Ripple Construction" },
       { property: "og:url", content: "/about" },
     ],
