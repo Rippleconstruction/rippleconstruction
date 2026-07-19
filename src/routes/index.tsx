@@ -41,6 +41,8 @@ const SERVICES = [
   { title: "External Cladding", body: "Weatherboard, composite and architectural cladding.", img: cladding, to: "/services" as const },
   { title: "Internal Fit-Off", body: "Doors, skirtings, architraves and joinery installation.", img: fitoff, to: "/services" as const },
   { title: "Decks & Structures", body: "Hardwood decks, pergolas and outdoor timber structures.", img: deck, to: "/services" as const },
+  { title: "Fencing", body: "Timber, slat and boundary fencing built straight and built to last.", img: fencing, to: "/services" as const },
+  { title: "Retaining Walls", body: "Engineered sleeper and concrete retaining walls that hold the line.", img: retainingWall, to: "/services" as const },
 ];
 
 const PROJECTS = [
