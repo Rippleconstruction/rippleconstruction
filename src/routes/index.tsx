@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Reliable carpentry subcontractors for builders and developers. Timber framing, cladding, fit-off and structural carpentry across Brisbane, Moreton Bay and Sunshine Coast.",
+          "Reliable carpentry subcontractors for builders, developers and homeowners. Timber framing, cladding, fit-off, fencing, retaining walls and structural carpentry across Brisbane, Moreton Bay and Sunshine Coast.",
       },
       { property: "og:title", content: "Ripple Construction — Carpentry Subcontractors QLD" },
       { property: "og:url", content: "/" },
