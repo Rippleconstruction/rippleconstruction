@@ -65,9 +65,9 @@ function About() {
                 workmanship that passes inspection first time.
               </p>
               <p>
-                Today we work with some of the most respected builders and developers across
-                Brisbane, Moreton Bay and the Sunshine Coast — and most of our work comes from
-                repeat clients and referrals.
+                Today we work with respected builders, developers and homeowners across Brisbane,
+                Moreton Bay and the Sunshine Coast — and most of our work comes from repeat
+                clients and referrals.
               </p>
             </div>
           </Reveal>
