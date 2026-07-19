@@ -5,6 +5,8 @@ import roof from "@/assets/roof-framing.jpg";
 import cladding from "@/assets/cladding.jpg";
 import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
+import fencing from "@/assets/fencing.jpg";
+import retainingWall from "@/assets/retaining-wall.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
 import hero from "@/assets/hero.jpg";
@@ -13,8 +15,8 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Carpentry Services — Framing, Cladding, Fit-Off & Structural | Ripple Construction" },
-      { name: "description", content: "Carpentry subcontractor services in QLD: timber framing, wall & roof framing, structural carpentry, external cladding, internal fit-off, decks and renovations." },
+      { title: "Carpentry Services — Framing, Cladding, Fencing & Retaining Walls | Ripple Construction" },
+      { name: "description", content: "Carpentry subcontractor services in QLD: timber framing, wall & roof framing, structural carpentry, external cladding, internal fit-off, decks, fencing, retaining walls and renovations." },
       { property: "og:title", content: "Carpentry Services — Ripple Construction" },
       { property: "og:url", content: "/services" },
     ],
