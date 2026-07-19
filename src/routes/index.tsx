@@ -86,8 +86,9 @@ function Home() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 max-w-2xl text-lg md:text-xl text-white/80 leading-relaxed">
-              Delivering high-quality framing, cladding, fit-off and structural carpentry
-              across South East Queensland.
+              Delivering high-quality framing, cladding, fit-off, fencing, retaining walls and
+              structural carpentry across South East Queensland — for builders, developers and
+              homeowners.
             </p>
           </Reveal>
           <Reveal delay={300}>
