@@ -5,6 +5,8 @@ import framing from "@/assets/framing.jpg";
 import cladding from "@/assets/cladding.jpg";
 import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
+import fencing from "@/assets/fencing.jpg";
+import retainingWall from "@/assets/retaining-wall.jpg";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
 import project3 from "@/assets/project3.jpg";
