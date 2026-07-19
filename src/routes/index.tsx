@@ -191,7 +191,7 @@ function Home() {
             </Link>
           </div>
 
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s, i) => (
               <Reveal key={s.title} delay={i * 80}>
                 <Link to={s.to} className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-[var(--shadow-elegant)] transition-all duration-300 hover:-translate-y-1">
