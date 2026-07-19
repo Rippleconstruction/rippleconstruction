@@ -158,12 +158,13 @@ function Home() {
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Ripple Construction is a dedicated carpentry subcontractor working with builders,
-              developers and construction companies across South East Queensland. From large-scale
-              framing packages to detailed fit-off work, we bring the same standards to every site:
-              clean workmanship, tight schedules and clear communication.
+              developers, construction companies and homeowners across South East Queensland. From
+              large-scale framing packages to fencing, retaining walls and detailed fit-off work,
+              we bring the same standards to every site: clean workmanship, tight schedules and
+              clear communication.
             </p>
             <ul className="mt-6 space-y-3">
-              {["Qualified, safety-focused carpenters", "Framing, cladding, fit-off & structural work", "Servicing Brisbane, Moreton Bay & Sunshine Coast"].map((t) => (
+              {["Qualified, safety-focused carpenters", "Framing, cladding, fit-off, fencing & retaining walls", "Servicing Brisbane, Moreton Bay & Sunshine Coast"].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-foreground">
                   <CheckCircle2 className="h-5 w-5 text-[var(--timber)] mt-0.5 shrink-0" />
                   <span>{t}</span>
