@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
 });
 
 const VALUES = [
-  { icon: ShieldCheck, title: "Reliable & Professional", body: "Trusted by builders and developers to show up, communicate and deliver — every project, every time." },
+  { icon: ShieldCheck, title: "Reliable & Professional", body: "Trusted by builders, developers and homeowners to show up, communicate and deliver — every project, every time." },
   { icon: Hammer, title: "Quality Workmanship", body: "Qualified carpenters producing precise, code-compliant work you can put your name to." },
   { icon: Clock, title: "On-Time Delivery", body: "Efficient scheduling and disciplined crews keep your program moving without surprises." },
 ];
