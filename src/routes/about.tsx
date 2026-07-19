@@ -36,7 +36,7 @@ function About() {
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
               Ripple Construction is a South East Queensland carpentry subcontractor working
-              alongside builders and developers who care about quality and program.
+              alongside builders, developers and homeowners who care about quality and program.
             </p>
           </Reveal>
         </div>
