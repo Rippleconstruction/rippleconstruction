@@ -32,6 +32,8 @@ const SERVICES = [
   { title: "External Cladding", body: "Weatherboard, composite, timber-look and architectural cladding — installed clean and straight.", img: cladding },
   { title: "Internal Fixing & Fit-Off", body: "Doors, skirtings, architraves, linings and joinery installation with a sharp finish.", img: fitoff },
   { title: "Decks & Outdoor Structures", body: "Hardwood decks, pergolas, screens and outdoor timber structures built to last.", img: deck },
+  { title: "Fencing", body: "Timber fencing, slat screens, boundary fences and privacy walls — built straight and built to last.", img: fencing },
+  { title: "Retaining Walls", body: "Engineered timber sleeper and concrete retaining walls that hold the line and look sharp.", img: retainingWall },
   { title: "Renovations", body: "Carpentry-led renovations and extensions — from Queenslander character work to modern rebuilds.", img: project3 },
   { title: "General Carpentry", body: "Site carpentry, temporary works, remedial repairs and everything in between.", img: hero },
 ];
