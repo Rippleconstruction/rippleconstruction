@@ -47,7 +47,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-x py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
           <div>© {new Date().getFullYear()} Ripple Construction Pty Ltd. All rights reserved.</div>
-          <div>ABN 00 000 000 000 · Fully Insured</div>
+          <div>ABN 41 682 614 517 · Fully Insured</div>
         </div>
       </div>
     </footer>
