@@ -72,7 +72,7 @@ function WhyChoose() {
             </h2>
             <div className="mt-8 flex justify-center flex-wrap gap-3">
               <Link to="/contact" className="btn-timber">Request a Quote <ArrowRight className="h-4 w-4" /></Link>
-              <a href="tel:+61400000000" className="btn-ghost-light">Call 0400 000 000</a>
+              <a href="tel:+61436802414" className="btn-ghost-light">Call 0436802414</a>
             </div>
           </Reveal>
         </div>
