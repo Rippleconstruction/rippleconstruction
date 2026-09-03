@@ -135,8 +135,13 @@ function Contact() {
                     />
                     {errors.message && <p className="mt-1 text-sm text-destructive">{errors.message}</p>}
                   </div>
-                  <button type="submit" className="btn-timber justify-center">
-                    Send enquiry <Send className="h-4 w-4" />
+                  {submitError && (
+                    <p className="rounded-lg border border-destructive/40 bg-destructive/10 px-4 py-3 text-sm text-destructive">
+                      {submitError}
+                    </p>
+                  )}
+                  <button type="submit" disabled={sending} className="btn-timber justify-center disabled:opacity-60">
+                    {sending ? "Sending…" : "Send enquiry"} <Send className="h-4 w-4" />
                   </button>
                   <p className="text-xs text-muted-foreground">
                     By submitting, you agree to be contacted about your enquiry. We don't share
