@@ -29,8 +29,10 @@ const schema = z.object({
 function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const data = Object.fromEntries(fd) as Record<string, string>;
@@ -45,7 +47,25 @@ function Contact() {
       return;
     }
     setErrors({});
-    setSent(true);
+    setSubmitError(null);
+    setSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(parsed.data),
+      });
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        setSubmitError(body?.error ?? "Something went wrong. Please try again, or call us directly.");
+        return;
+      }
+      setSent(true);
+    } catch {
+      setSubmitError("We couldn't send your enquiry just now. Please try again, or call us directly.");
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
