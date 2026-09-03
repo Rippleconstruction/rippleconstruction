@@ -129,8 +129,8 @@ function Contact() {
 
           <Reveal delay={100}>
             <div className="grid gap-6">
-              <InfoCard icon={Phone} label="Phone" value="0400 000 000" href="tel:+61400000000" />
-              <InfoCard icon={Mail} label="Email" value="info@rippleconstruction.com.au" href="mailto:info@rippleconstruction.com.au" />
+              <InfoCard icon={Phone} label="Phone" value="0436802414" href="tel:+61436802414" />
+              <InfoCard icon={Mail} label="Email" value="Michael@rippleconstruction.com.au" href="mailto:Michael@rippleconstruction.com.au" />
               <InfoCard icon={MapPin} label="Service Area" value="Brisbane · Moreton Bay · Sunshine Coast" />
 
               <div className="overflow-hidden rounded-2xl border border-border">
