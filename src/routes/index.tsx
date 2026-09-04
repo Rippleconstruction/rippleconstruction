@@ -230,7 +230,7 @@ function Home() {
               <Reveal key={p.title} delay={i * 100}>
                 <div className="group overflow-hidden rounded-2xl bg-card border border-border">
                   <div className="relative aspect-[5/6] overflow-hidden">
-                    <img src={p.img} alt={p.title} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src={p.img} alt={p.alt} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-6">
                     <div className="text-xs uppercase tracking-widest text-[var(--timber-deep)] font-semibold">{p.tag}</div>
