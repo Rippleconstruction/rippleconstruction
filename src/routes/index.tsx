@@ -143,7 +143,7 @@ function Home() {
         <div className="container-x grid gap-12 md:grid-cols-2 md:items-center">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={framing} alt="Carpenters installing timber framing on site" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
+              <img src={featureBeams} alt="Exposed timber feature beams and posts in a finished open-plan interior" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
               <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-[var(--ink)]/85 backdrop-blur p-4 text-[var(--bone)] flex items-center gap-3">
                 <div className="h-10 w-10 rounded-lg bg-[var(--timber)] grid place-items-center font-display font-bold">R</div>
                 <div>
