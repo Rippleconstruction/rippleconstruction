@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Hammer, Clock, CheckCircle2, Quote } from "lucide-react";
+import { ArrowRight, ShieldCheck, Hammer, Clock, CheckCircle2 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import framing from "@/assets/framing.jpg";
 import cladding from "@/assets/cladding.jpg";
@@ -51,11 +51,6 @@ const PROJECTS = [
   { title: "Heritage Renovation", tag: "Renovation & Deck", img: project3 },
 ];
 
-const TESTIMONIALS = [
-  { q: "Ripple's crew is easily one of the most reliable frames we've worked with. Clean sites, sharp workmanship and always on program.", by: "Daniel M.", role: "Site Manager, Brisbane Builder" },
-  { q: "Communication is what sets them apart. We hand over the plans, they come back with a plan — and they deliver.", by: "Sarah K.", role: "Project Manager, Developer" },
-  { q: "Quality of finish on the cladding and fit-off was excellent. We've booked them for the next three houses.", by: "Tom R.", role: "Director, Custom Home Builder" },
-];
 
 function Home() {
   return (
@@ -241,31 +236,6 @@ function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
-      <section className="py-20 md:py-28">
-        <div className="container-x">
-          <Reveal>
-            <div className="max-w-3xl">
-              <span className="eyebrow"><span className="h-px w-8 bg-[var(--timber)]" />What builders say</span>
-              <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-tight">Trusted on site.</h2>
-            </div>
-          </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {TESTIMONIALS.map((t, i) => (
-              <Reveal key={t.by} delay={i * 100}>
-                <figure className="h-full rounded-2xl border border-border bg-card p-8">
-                  <Quote className="h-6 w-6 text-[var(--timber)]" />
-                  <blockquote className="mt-4 text-foreground leading-relaxed">"{t.q}"</blockquote>
-                  <figcaption className="mt-6 pt-6 border-t border-border">
-                    <div className="font-semibold">{t.by}</div>
-                    <div className="text-sm text-muted-foreground">{t.role}</div>
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="relative overflow-hidden">
