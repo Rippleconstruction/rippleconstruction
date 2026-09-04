@@ -44,18 +44,18 @@ const VALUES = [
 ];
 
 const SERVICES = [
-  { title: "Timber Framing", body: "Precision wall, floor and roof framing built to plan.", img: framing, to: "/services" as const },
-  { title: "External Cladding", body: "Weatherboard, composite and architectural cladding.", img: cladding, to: "/services" as const },
-  { title: "Internal Fit-Off", body: "Doors, skirtings, architraves and joinery installation.", img: fitoff, to: "/services" as const },
-  { title: "Decks & Structures", body: "Hardwood decks, pergolas and outdoor timber structures.", img: deck, to: "/services" as const },
-  { title: "Fencing", body: "Timber, slat and boundary fencing built straight and built to last.", img: fencing, to: "/services" as const },
-  { title: "Retaining Walls", body: "Engineered sleeper and concrete retaining walls that hold the line.", img: retainingWall, to: "/services" as const },
+  { title: "Timber Framing", body: "Wall, floor and roof framing set out and stood true to plan.", img: framing, to: "/services" as const },
+  { title: "External Cladding", body: "Weatherboard, composite and architectural cladding installed straight.", img: cladding, to: "/services" as const },
+  { title: "Internal Fit-Off", body: "Flooring, doors, skirtings, architraves and joinery installation.", img: fitoff, to: "/services" as const },
+  { title: "Decks & Structures", body: "Decking, stairs, pergolas and outdoor structures built to last.", img: deck, to: "/services" as const },
+  { title: "Fencing", body: "Timber, slat and Colourbond boundary fencing built dead straight.", img: fencing, to: "/services" as const },
+  { title: "Retaining Walls", body: "Engineered concrete sleeper retaining walls that hold the line.", img: retainingWall, to: "/services" as const },
 ];
 
 const PROJECTS = [
-  { title: "Coastal Contemporary", tag: "Framing & Cladding", img: project1 },
-  { title: "Commercial Framework", tag: "Structural Carpentry", img: project2 },
-  { title: "Heritage Renovation", tag: "Renovation & Deck", img: project3 },
+  { title: "Arched Timber Entry Doors", tag: "Fit-Off & Joinery", img: archDoor, alt: "Custom arched timber double entry doors installed in a new home" },
+  { title: "Steel Shed Frame", tag: "Structural Carpentry", img: shed, alt: "Structural steel shed frame erected on a new concrete slab" },
+  { title: "Built-In Wardrobe", tag: "Internal Fit-Off", img: wardrobe, alt: "Finished built-in wardrobe with shelving, hanging rails and lighting" },
 ];
 
 
