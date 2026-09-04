@@ -8,7 +8,16 @@ import framing from "@/assets/framing.jpg";
 import cladding from "@/assets/cladding.jpg";
 import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
-import roof from "@/assets/roof-framing.jpg";
+import fencing from "@/assets/fencing.jpg";
+import hero from "@/assets/hero.jpg";
+import archDoorAsset from "@/assets/arch_door.jpg.asset.json";
+import featureBeamsAsset from "@/assets/feature_beams.jpg.asset.json";
+import shedAsset from "@/assets/shed.jpg.asset.json";
+import speedpanelAsset from "@/assets/speedpanel.jpg.asset.json";
+import wardrobeAsset from "@/assets/wardrobe.webp.asset.json";
+import lawnAsset from "@/assets/lawn_1.jpg.asset.json";
+import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg.asset.json";
+
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/projects")({
