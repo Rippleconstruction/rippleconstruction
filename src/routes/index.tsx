@@ -7,10 +7,17 @@ import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
 import fencing from "@/assets/fencing.jpg";
 import retainingWall from "@/assets/retaining-wall.jpg";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import cta from "@/assets/cta.jpg";
+import archDoorAsset from "@/assets/arch_door.jpg.asset.json";
+import shedAsset from "@/assets/shed.jpg.asset.json";
+import wardrobeAsset from "@/assets/wardrobe.webp.asset.json";
+import featureBeamsAsset from "@/assets/feature_beams.jpg.asset.json";
+import speedpanelAsset from "@/assets/speedpanel.jpg.asset.json";
+
+const archDoor = archDoorAsset.url;
+const shed = shedAsset.url;
+const wardrobe = wardrobeAsset.url;
+const featureBeams = featureBeamsAsset.url;
+const cta = speedpanelAsset.url;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
