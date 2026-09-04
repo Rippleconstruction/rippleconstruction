@@ -8,7 +8,16 @@ import framing from "@/assets/framing.jpg";
 import cladding from "@/assets/cladding.jpg";
 import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
-import roof from "@/assets/roof-framing.jpg";
+import fencing from "@/assets/fencing.jpg";
+import hero from "@/assets/hero.jpg";
+import archDoorAsset from "@/assets/arch_door.jpg.asset.json";
+import featureBeamsAsset from "@/assets/feature_beams.jpg.asset.json";
+import shedAsset from "@/assets/shed.jpg.asset.json";
+import speedpanelAsset from "@/assets/speedpanel.jpg.asset.json";
+import wardrobeAsset from "@/assets/wardrobe.webp.asset.json";
+import lawnAsset from "@/assets/lawn_1.jpg.asset.json";
+import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg.asset.json";
+
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/projects")({
@@ -24,18 +33,26 @@ export const Route = createFileRoute("/projects")({
   component: Projects,
 });
 
-type Cat = "All" | "Framing" | "Cladding" | "Fit-Off" | "Decks" | "Commercial" | "Renovation";
-const CATS: Cat[] = ["All", "Framing", "Cladding", "Fit-Off", "Decks", "Commercial", "Renovation"];
+type Cat = "All" | "Framing" | "Cladding" | "Fit-Off" | "Decks" | "Fencing" | "Retaining Walls" | "Commercial" | "Landscaping";
+const CATS: Cat[] = ["All", "Framing", "Cladding", "Fit-Off", "Decks", "Fencing", "Retaining Walls", "Commercial", "Landscaping"];
 
-const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: string }[] = [
-  { title: "Coastal Contemporary", cat: "Cladding", img: project1, location: "Sunshine Coast" },
-  { title: "Warehouse Framework", cat: "Commercial", img: project2, location: "Brisbane" },
-  { title: "Queenslander Renewal", cat: "Renovation", img: project3, location: "Moreton Bay" },
-  { title: "Estate Framing Package", cat: "Framing", img: framing, location: "North Lakes" },
-  { title: "Architectural Cladding", cat: "Cladding", img: cladding, location: "Newstead" },
-  { title: "Custom Interior Fit-Off", cat: "Fit-Off", img: fitoff, location: "Brisbane" },
-  { title: "Hardwood Deck & Pergola", cat: "Decks", img: deck, location: "Buderim" },
-  { title: "Two-Storey Roof Framing", cat: "Framing", img: roof, location: "Caboolture" },
+const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: string; alt: string }[] = [
+  { title: "Arched Timber Entry Doors", cat: "Fit-Off", img: archDoorAsset.url, location: "Brisbane", alt: "Custom arched timber double entry doors installed in a new home" },
+  { title: "Exposed Feature Beams", cat: "Fit-Off", img: featureBeamsAsset.url, location: "Sunshine Coast", alt: "Exposed timber feature beams and posts with steel brackets in an open-plan living area" },
+  { title: "Steel Shed Frame", cat: "Commercial", img: shedAsset.url, location: "Moreton Bay", alt: "Structural steel shed frame erected on a new concrete slab" },
+  { title: "Speedpanel Wall System", cat: "Commercial", img: speedpanelAsset.url, location: "Brisbane CBD", alt: "Speedpanel wall panels stacked on an elevated commercial site above the city skyline" },
+  { title: "Built-In Wardrobe", cat: "Fit-Off", img: wardrobeAsset.url, location: "Brisbane", alt: "Finished built-in wardrobe with white shelving, hanging rails and recessed lighting" },
+  { title: "Concrete Sleeper Retaining Wall", cat: "Retaining Walls", img: retainingFinishAsset.url, location: "Sunshine Coast", alt: "Finished concrete sleeper retaining wall supporting a fenced property boundary" },
+  { title: "Site Finish & Garden Edging", cat: "Landscaping", img: lawnAsset.url, location: "Moreton Bay", alt: "Completed lawn with curved mulched garden beds and timber edging around a raised home" },
+  { title: "Driveway Retaining Wall", cat: "Retaining Walls", img: project3, location: "Brisbane", alt: "Concrete sleeper retaining wall along a rural driveway" },
+  { title: "Composite Deck & Stairs", cat: "Decks", img: project1, location: "Buderim", alt: "Composite decking with timber stairs at a residential home" },
+  { title: "Colourbond Boundary Fencing", cat: "Fencing", img: project2, location: "Caboolture", alt: "Colourbond boundary fencing installed along a residential property line" },
+  { title: "Estate Framing Package", cat: "Framing", img: hero, location: "North Lakes", alt: "Timber wall and floor framing on a new residential slab" },
+  { title: "Floor & Roof Framing", cat: "Framing", img: framing, location: "Brisbane", alt: "Timber floor and roof framing with steel beams on a new build" },
+  { title: "Architectural Cladding", cat: "Cladding", img: cladding, location: "Newstead", alt: "Architectural cladding installed on a modern facade" },
+  { title: "Hybrid Flooring Install", cat: "Fit-Off", img: fitoff, location: "Brisbane", alt: "Hybrid timber-look flooring installed through a finished interior" },
+  { title: "Timber Fencing", cat: "Fencing", img: fencing, location: "Moreton Bay", alt: "New timber paling fence built along a residential boundary" },
+  { title: "Pool Deck & Screening", cat: "Decks", img: deck, location: "Sunshine Coast", alt: "Composite pool deck with timber screening" },
 ];
 
 function Projects() {

@@ -7,10 +7,17 @@ import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
 import fencing from "@/assets/fencing.jpg";
 import retainingWall from "@/assets/retaining-wall.jpg";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import cta from "@/assets/cta.jpg";
+import archDoorAsset from "@/assets/arch_door.jpg.asset.json";
+import shedAsset from "@/assets/shed.jpg.asset.json";
+import wardrobeAsset from "@/assets/wardrobe.webp.asset.json";
+import featureBeamsAsset from "@/assets/feature_beams.jpg.asset.json";
+import speedpanelAsset from "@/assets/speedpanel.jpg.asset.json";
+
+const archDoor = archDoorAsset.url;
+const shed = shedAsset.url;
+const wardrobe = wardrobeAsset.url;
+const featureBeams = featureBeamsAsset.url;
+const cta = speedpanelAsset.url;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/")({
@@ -37,18 +44,18 @@ const VALUES = [
 ];
 
 const SERVICES = [
-  { title: "Timber Framing", body: "Precision wall, floor and roof framing built to plan.", img: framing, to: "/services" as const },
-  { title: "External Cladding", body: "Weatherboard, composite and architectural cladding.", img: cladding, to: "/services" as const },
-  { title: "Internal Fit-Off", body: "Doors, skirtings, architraves and joinery installation.", img: fitoff, to: "/services" as const },
-  { title: "Decks & Structures", body: "Hardwood decks, pergolas and outdoor timber structures.", img: deck, to: "/services" as const },
-  { title: "Fencing", body: "Timber, slat and boundary fencing built straight and built to last.", img: fencing, to: "/services" as const },
-  { title: "Retaining Walls", body: "Engineered sleeper and concrete retaining walls that hold the line.", img: retainingWall, to: "/services" as const },
+  { title: "Timber Framing", body: "Wall, floor and roof framing set out and stood true to plan.", img: framing, to: "/services" as const },
+  { title: "External Cladding", body: "Weatherboard, composite and architectural cladding installed straight.", img: cladding, to: "/services" as const },
+  { title: "Internal Fit-Off", body: "Flooring, doors, skirtings, architraves and joinery installation.", img: fitoff, to: "/services" as const },
+  { title: "Decks & Structures", body: "Decking, stairs, pergolas and outdoor structures built to last.", img: deck, to: "/services" as const },
+  { title: "Fencing", body: "Timber, slat and Colourbond boundary fencing built dead straight.", img: fencing, to: "/services" as const },
+  { title: "Retaining Walls", body: "Engineered concrete sleeper retaining walls that hold the line.", img: retainingWall, to: "/services" as const },
 ];
 
 const PROJECTS = [
-  { title: "Coastal Contemporary", tag: "Framing & Cladding", img: project1 },
-  { title: "Commercial Framework", tag: "Structural Carpentry", img: project2 },
-  { title: "Heritage Renovation", tag: "Renovation & Deck", img: project3 },
+  { title: "Arched Timber Entry Doors", tag: "Fit-Off & Joinery", img: archDoor, alt: "Custom arched timber double entry doors installed in a new home" },
+  { title: "Steel Shed Frame", tag: "Structural Carpentry", img: shed, alt: "Structural steel shed frame erected on a new concrete slab" },
+  { title: "Built-In Wardrobe", tag: "Internal Fit-Off", img: wardrobe, alt: "Finished built-in wardrobe with shelving, hanging rails and lighting" },
 ];
 
 
@@ -136,7 +143,7 @@ function Home() {
         <div className="container-x grid gap-12 md:grid-cols-2 md:items-center">
           <Reveal>
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={framing} alt="Carpenters installing timber framing on site" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
+              <img src={featureBeams} alt="Exposed timber feature beams and posts in a finished open-plan interior" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
               <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-[var(--ink)]/85 backdrop-blur p-4 text-[var(--bone)] flex items-center gap-3">
                 <div className="h-10 w-10 rounded-lg bg-[var(--timber)] grid place-items-center font-display font-bold">R</div>
                 <div>
@@ -223,7 +230,7 @@ function Home() {
               <Reveal key={p.title} delay={i * 100}>
                 <div className="group overflow-hidden rounded-2xl bg-card border border-border">
                   <div className="relative aspect-[5/6] overflow-hidden">
-                    <img src={p.img} alt={p.title} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src={p.img} alt={p.alt} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-6">
                     <div className="text-xs uppercase tracking-widest text-[var(--timber-deep)] font-semibold">{p.tag}</div>
@@ -239,7 +246,7 @@ function Home() {
 
       {/* CTA */}
       <section className="relative overflow-hidden">
-        <img src={cta} alt="Carpenter working with a nail gun on timber framing" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={cta} alt="Speedpanel wall panels stacked on a commercial high-rise site" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[var(--ink)]/80" />
         <div className="relative container-x py-24 md:py-32 text-[var(--bone)]">
           <Reveal>
