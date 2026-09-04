@@ -51,11 +51,6 @@ const PROJECTS = [
   { title: "Heritage Renovation", tag: "Renovation & Deck", img: project3 },
 ];
 
-const TESTIMONIALS = [
-  { q: "Ripple's crew is easily one of the most reliable frames we've worked with. Clean sites, sharp workmanship and always on program.", by: "Daniel M.", role: "Site Manager, Brisbane Builder" },
-  { q: "Communication is what sets them apart. We hand over the plans, they come back with a plan — and they deliver.", by: "Sarah K.", role: "Project Manager, Developer" },
-  { q: "Quality of finish on the cladding and fit-off was excellent. We've booked them for the next three houses.", by: "Tom R.", role: "Director, Custom Home Builder" },
-];
 
 function Home() {
   return (
