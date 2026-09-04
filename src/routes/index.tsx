@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Hammer, Clock, CheckCircle2, Quote } from "lucide-react";
+import { ArrowRight, ShieldCheck, Hammer, Clock, CheckCircle2 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import framing from "@/assets/framing.jpg";
 import cladding from "@/assets/cladding.jpg";
