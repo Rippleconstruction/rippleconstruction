@@ -246,7 +246,7 @@ function Home() {
 
       {/* CTA */}
       <section className="relative overflow-hidden">
-        <img src={cta} alt="Carpenter working with a nail gun on timber framing" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={cta} alt="Speedpanel wall panels stacked on a commercial high-rise site" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[var(--ink)]/80" />
         <div className="relative container-x py-24 md:py-32 text-[var(--bone)]">
           <Reveal>
