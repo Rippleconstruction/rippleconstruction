@@ -7,8 +7,6 @@ import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
 import fencing from "@/assets/fencing.jpg";
 import retainingWall from "@/assets/retaining-wall.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
 import hero from "@/assets/hero.jpg";
 import shedAsset from "@/assets/shed.jpg.asset.json";
 import archDoorAsset from "@/assets/arch_door.jpg.asset.json";

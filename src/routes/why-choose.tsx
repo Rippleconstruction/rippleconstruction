@@ -63,7 +63,7 @@ function WhyChoose() {
       </section>
 
       <section className="relative overflow-hidden">
-        <img src={cta} alt="Carpenter framing detail" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={cta} alt="Ripple Construction carpentry work on a real job site" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[var(--ink)]/80" />
         <div className="relative container-x py-24 md:py-32 text-[var(--bone)] text-center">
           <Reveal>
