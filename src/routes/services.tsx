@@ -33,7 +33,7 @@ export const Route = createFileRoute("/services")({
 const SERVICES = [
   { title: "Timber Framing", body: "Precision timber framing for residential and commercial builds — cut to plan, stood true, ready for inspection.", img: framing },
   { title: "Wall & Roof Framing", body: "Full wall and roof framing packages, from single dwellings to multi-lot developments.", img: roof },
-  { title: "Structural Carpentry", body: "Load-bearing structural carpentry executed to engineering specifications and Australian standards.", img: project2 },
+  { title: "Structural Carpentry", body: "Structural steel and shed framing, load-bearing carpentry and structural set-out executed to engineering specifications and Australian standards.", img: shed },
   { title: "External Cladding", body: "Weatherboard, composite, timber-look and architectural cladding — installed clean and straight.", img: cladding },
   { title: "Internal Fixing & Fit-Off", body: "Doors, skirtings, architraves, linings and joinery installation with a sharp finish.", img: fitoff },
   { title: "Decks & Outdoor Structures", body: "Hardwood decks, pergolas, screens and outdoor timber structures built to last.", img: deck },
