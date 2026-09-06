@@ -1,7 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, HardHat, Handshake, MessagesSquare, Shield } from "lucide-react";
-import Frame from "@/assets/about.jpg";
-import Shed from "@/assets/framing.jpg";
+import lawnAsset from "@/assets/lawn_1.jpg.asset.json";
+import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg.asset.json";
+
+const Frame = lawnAsset.url;
+const Shed = retainingFinishAsset.url;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
@@ -46,7 +49,7 @@ function About() {
         <div className="container-x grid gap-12 md:grid-cols-2 md:items-center">
           <Reveal>
             <div className="aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={Frame} alt="Ripple Construction team on site reviewing plans" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
+              <img src={Frame} alt="Finished lawn and curved garden edging around a completed Ripple Construction home project" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
             </div>
           </Reveal>
           <Reveal delay={150}>
@@ -121,7 +124,7 @@ function About() {
           </Reveal>
           <Reveal>
             <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src={Shed} alt="Framing carpenters on a Queensland job site" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
+              <img src={Shed} alt="Finished retaining wall with fencing on a South East Queensland property" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
             </div>
           </Reveal>
         </div>

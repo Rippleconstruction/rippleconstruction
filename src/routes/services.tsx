@@ -7,9 +7,12 @@ import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
 import fencing from "@/assets/fencing.jpg";
 import retainingWall from "@/assets/retaining-wall.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
 import hero from "@/assets/hero.jpg";
+import shedAsset from "@/assets/shed.jpg.asset.json";
+import archDoorAsset from "@/assets/arch_door.jpg.asset.json";
+
+const shed = shedAsset.url;
+const archDoor = archDoorAsset.url;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/services")({
@@ -28,13 +31,13 @@ export const Route = createFileRoute("/services")({
 const SERVICES = [
   { title: "Timber Framing", body: "Precision timber framing for residential and commercial builds — cut to plan, stood true, ready for inspection.", img: framing },
   { title: "Wall & Roof Framing", body: "Full wall and roof framing packages, from single dwellings to multi-lot developments.", img: roof },
-  { title: "Structural Carpentry", body: "Load-bearing structural carpentry executed to engineering specifications and Australian standards.", img: project2 },
+  { title: "Structural Carpentry", body: "Structural steel and shed framing, load-bearing carpentry and structural set-out executed to engineering specifications and Australian standards.", img: shed },
   { title: "External Cladding", body: "Weatherboard, composite, timber-look and architectural cladding — installed clean and straight.", img: cladding },
   { title: "Internal Fixing & Fit-Off", body: "Doors, skirtings, architraves, linings and joinery installation with a sharp finish.", img: fitoff },
   { title: "Decks & Outdoor Structures", body: "Hardwood decks, pergolas, screens and outdoor timber structures built to last.", img: deck },
   { title: "Fencing", body: "Timber fencing, slat screens, boundary fences and privacy walls — built straight and built to last.", img: fencing },
   { title: "Retaining Walls", body: "Engineered timber sleeper and concrete retaining walls that hold the line and look sharp.", img: retainingWall },
-  { title: "Renovations", body: "Carpentry-led renovations and extensions — from Queenslander character work to modern rebuilds.", img: project3 },
+  { title: "Renovations", body: "Carpentry-led renovations and extensions — custom entry doors, character upgrades and detailed carpentry from Queenslander work to modern rebuilds.", img: archDoor },
   { title: "General Carpentry", body: "Site carpentry, temporary works, remedial repairs and everything in between.", img: hero },
 ];
 
