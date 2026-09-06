@@ -23,11 +23,11 @@ import { Reveal } from "@/components/site/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ripple Construction — Carpentry Subcontractors Brisbane & QLD" },
+      { title: "Carpentry Subcontractors Brisbane | Ripple Construction" },
       {
         name: "description",
         content:
-          "Reliable carpentry subcontractors for builders, developers and homeowners. Timber framing, cladding, fit-off, fencing, retaining walls and structural carpentry across Brisbane, Moreton Bay and Sunshine Coast.",
+          "Ripple Construction provides reliable carpentry subcontracting across Brisbane, Moreton Bay and the Sunshine Coast, including framing, cladding, fit-off, fencing, retaining walls and structural carpentry.",
       },
       { property: "og:title", content: "Ripple Construction — Carpentry Subcontractors QLD" },
       { property: "og:url", content: "/" },
@@ -83,14 +83,14 @@ function Home() {
           </Reveal>
           <Reveal delay={100}>
             <h1 className="mt-5 font-display font-bold text-[clamp(2.4rem,6vw,5.25rem)] leading-[0.98] max-w-5xl">
-              Reliable Carpentry <span className="text-[var(--timber)]">Subcontractors</span> You Can Count On.
+              Carpentry Subcontractors in <span className="text-[var(--timber)]">Brisbane, Moreton Bay</span> &amp; Sunshine Coast
             </h1>
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-6 max-w-2xl text-lg md:text-xl text-white/80 leading-relaxed">
-              Delivering high-quality framing, cladding, fit-off, fencing, retaining walls and
-              structural carpentry across South East Queensland — for builders, developers and
-              homeowners.
+              Reliable commercial and residential carpentry subcontractors delivering framing,
+              cladding, fit-off, fencing, retaining walls and structural carpentry across South
+              East Queensland.
             </p>
           </Reveal>
           <Reveal delay={300}>
