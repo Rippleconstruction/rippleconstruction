@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Award, ShieldCheck, HardHat, Users, ClipboardCheck, CalendarClock, MapPin } from "lucide-react";
-import cta from "@/assets/cta.jpg";
+import cta from "@/assets/project1.jpg";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/why-choose")({
