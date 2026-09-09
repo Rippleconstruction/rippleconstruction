@@ -8,11 +8,11 @@ import deck from "@/assets/deck.jpg";
 import fencing from "@/assets/fencing.jpg";
 import retainingWall from "@/assets/retaining-wall.jpg";
 import hero from "@/assets/hero.jpg";
-import shedAsset from "@/assets/shed.jpg.asset.json";
-import archDoorAsset from "@/assets/arch_door.jpg.asset.json";
+import shedAsset from "@/assets/shed.jpg";
+import archDoorAsset from "@/assets/arch_door.jpg";
 
-const shed = shedAsset.url;
-const archDoor = archDoorAsset.url;
+const shed = shedAsset;
+const archDoor = archDoorAsset;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/services")({

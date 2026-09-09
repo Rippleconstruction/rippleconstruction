@@ -10,13 +10,13 @@ import fitoff from "@/assets/fitoff.jpg";
 import deck from "@/assets/deck.jpg";
 import fencing from "@/assets/fencing.jpg";
 import hero from "@/assets/hero.jpg";
-import archDoorAsset from "@/assets/arch_door.jpg.asset.json";
-import featureBeamsAsset from "@/assets/feature_beams.jpg.asset.json";
-import shedAsset from "@/assets/shed.jpg.asset.json";
-import speedpanelAsset from "@/assets/speedpanel.jpg.asset.json";
-import wardrobeAsset from "@/assets/wardrobe.webp.asset.json";
-import lawnAsset from "@/assets/lawn_1.jpg.asset.json";
-import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg.asset.json";
+import archDoorAsset from "@/assets/arch_door.jpg";
+import featureBeamsAsset from "@/assets/feature_beams.jpg";
+import shedAsset from "@/assets/shed.jpg";
+import speedpanelAsset from "@/assets/speedpanel.jpg";
+import wardrobeAsset from "@/assets/wardrobe.webp";
+import lawnAsset from "@/assets/lawn_1.jpg";
+import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg";
 
 import { Reveal } from "@/components/site/Reveal";
 
@@ -37,13 +37,13 @@ type Cat = "All" | "Framing" | "Cladding" | "Fit-Off" | "Decks" | "Fencing" | "R
 const CATS: Cat[] = ["All", "Framing", "Cladding", "Fit-Off", "Decks", "Fencing", "Retaining Walls", "Commercial", "Landscaping"];
 
 const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: string; alt: string }[] = [
-  { title: "Arched Timber Entry Doors", cat: "Fit-Off", img: archDoorAsset.url, location: "Brisbane", alt: "Custom arched timber double entry doors installed in a new home" },
-  { title: "Exposed Feature Beams", cat: "Fit-Off", img: featureBeamsAsset.url, location: "Sunshine Coast", alt: "Exposed timber feature beams and posts with steel brackets in an open-plan living area" },
-  { title: "Steel Shed Frame", cat: "Commercial", img: shedAsset.url, location: "Moreton Bay", alt: "Structural steel shed frame erected on a new concrete slab" },
-  { title: "Speedpanel Wall System", cat: "Commercial", img: speedpanelAsset.url, location: "Brisbane CBD", alt: "Speedpanel wall panels stacked on an elevated commercial site above the city skyline" },
-  { title: "Built-In Wardrobe", cat: "Fit-Off", img: wardrobeAsset.url, location: "Brisbane", alt: "Finished built-in wardrobe with white shelving, hanging rails and recessed lighting" },
-  { title: "Concrete Sleeper Retaining Wall", cat: "Retaining Walls", img: retainingFinishAsset.url, location: "Sunshine Coast", alt: "Finished concrete sleeper retaining wall supporting a fenced property boundary" },
-  { title: "Site Finish & Garden Edging", cat: "Landscaping", img: lawnAsset.url, location: "Moreton Bay", alt: "Completed lawn with curved mulched garden beds and timber edging around a raised home" },
+  { title: "Arched Timber Entry Doors", cat: "Fit-Off", img: archDoorAsset, location: "Brisbane", alt: "Custom arched timber double entry doors installed in a new home" },
+  { title: "Exposed Feature Beams", cat: "Fit-Off", img: featureBeamsAsset, location: "Sunshine Coast", alt: "Exposed timber feature beams and posts with steel brackets in an open-plan living area" },
+  { title: "Steel Shed Frame", cat: "Commercial", img: shedAsset, location: "Moreton Bay", alt: "Structural steel shed frame erected on a new concrete slab" },
+  { title: "Speedpanel Wall System", cat: "Commercial", img: speedpanelAsset, location: "Brisbane CBD", alt: "Speedpanel wall panels stacked on an elevated commercial site above the city skyline" },
+  { title: "Built-In Wardrobe", cat: "Fit-Off", img: wardrobeAsset, location: "Brisbane", alt: "Finished built-in wardrobe with white shelving, hanging rails and recessed lighting" },
+  { title: "Concrete Sleeper Retaining Wall", cat: "Retaining Walls", img: retainingFinishAsset, location: "Sunshine Coast", alt: "Finished concrete sleeper retaining wall supporting a fenced property boundary" },
+  { title: "Site Finish & Garden Edging", cat: "Landscaping", img: lawnAsset, location: "Moreton Bay", alt: "Completed lawn with curved mulched garden beds and timber edging around a raised home" },
   { title: "Driveway Retaining Wall", cat: "Retaining Walls", img: project3, location: "Brisbane", alt: "Concrete sleeper retaining wall along a rural driveway" },
   { title: "Composite Deck & Stairs", cat: "Decks", img: project1, location: "Buderim", alt: "Composite decking with timber stairs at a residential home" },
   { title: "Colourbond Boundary Fencing", cat: "Fencing", img: project2, location: "Caboolture", alt: "Colourbond boundary fencing installed along a residential property line" },
