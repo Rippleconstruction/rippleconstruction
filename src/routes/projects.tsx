@@ -44,7 +44,7 @@ const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: s
   { title: "Built-In Wardrobe", cat: "Fit-Off", img: wardrobeAsset, location: "Brisbane", alt: "Finished built-in wardrobe with white shelving, hanging rails and recessed lighting" },
   { title: "Concrete Sleeper Retaining Wall", cat: "Retaining Walls", img: retainingFinishAsset, location: "Sunshine Coast", alt: "Finished concrete sleeper retaining wall supporting a fenced property boundary" },
   { title: "Site Finish & Garden Edging", cat: "Landscaping", img: lawnAsset, location: "Moreton Bay", alt: "Completed lawn with curved mulched garden beds and timber edging around a raised home" },
-  { title: "Driveway Retaining Wall", cat: "Retaining Walls", img: project3, location: "Brisbane", alt: "Concrete sleeper retaining wall along a rural driveway" },
+  { title: "Custom Internal Fitout", cat: "Fit-Off", img: project3, location: "Brisbane", alt: "Custom internal fitout with detailed joinery and built-in cabinetry" },
   { title: "Composite Deck & Stairs", cat: "Decks", img: project1, location: "Buderim", alt: "Composite decking with timber stairs at a residential home" },
   { title: "Colourbond Boundary Fencing", cat: "Fencing", img: project2, location: "Caboolture", alt: "Colourbond boundary fencing installed along a residential property line" },
   { title: "Estate Framing Package", cat: "Framing", img: hero, location: "North Lakes", alt: "Timber wall and floor framing on a new residential slab" },
@@ -52,7 +52,7 @@ const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: s
   { title: "Architectural Cladding", cat: "Cladding", img: cladding, location: "Newstead", alt: "Architectural cladding installed on a modern facade" },
   { title: "Hybrid Flooring Install", cat: "Fit-Off", img: fitoff, location: "Brisbane", alt: "Hybrid timber-look flooring installed through a finished interior" },
   { title: "Timber Fencing", cat: "Fencing", img: fencing, location: "Moreton Bay", alt: "New timber paling fence built along a residential boundary" },
-  { title: "Pool Deck & Screening", cat: "Decks", img: deck, location: "Sunshine Coast", alt: "Composite pool deck with timber screening" },
+  
 ];
 
 function Projects() {
