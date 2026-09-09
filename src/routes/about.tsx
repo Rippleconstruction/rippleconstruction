@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, HardHat, Handshake, MessagesSquare, Shield } from "lucide-react";
-import lawnAsset from "@/assets/lawn_1.jpg.asset.json";
-import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg.asset.json";
+import lawnAsset from "@/assets/lawn_1.jpg";
+import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg";
 
-const Frame = lawnAsset.url;
-const Shed = retainingFinishAsset.url;
+const Frame = lawnAsset;
+const Shed = retainingFinishAsset;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
