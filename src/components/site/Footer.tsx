@@ -1,55 +1,6 @@
-import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
-
+import { Link } from '@tanstack/react-router';
+import { Mail, Phone, MapPin, Instagram, ArrowUpRight } from 'lucide-react';
+import { GOOGLE_PROFILE } from '@/lib/site-content';
 export function Footer() {
-  return (
-    <footer className="bg-[var(--ink)] text-[var(--bone)]">
-      <div className="container-x py-16 md:py-20 grid gap-12 md:grid-cols-4">
-        <div className="md:col-span-2">
-          <div className="flex items-center gap-2">
-            <span className="grid h-10 w-10 place-items-center rounded-md bg-[var(--bone)] text-[var(--ink)] font-display font-bold">
-              R
-            </span>
-            <div className="leading-tight">
-              <div className="font-display text-xl font-bold">Ripple Construction</div>
-              <div className="text-[10px] uppercase tracking-[0.22em] text-white/50">
-                Carpentry Subcontractors · QLD
-              </div>
-            </div>
-          </div>
-          <p className="mt-6 max-w-md text-sm text-white/70 leading-relaxed">
-            Reliable carpentry subcontractors delivering framing, cladding, fit-off, fencing,
-            retaining walls and structural carpentry across Brisbane, Moreton Bay and the Sunshine
-            Coast — for builders, developers and homeowners.
-          </p>
-        </div>
-
-        <div>
-          <div className="text-xs uppercase tracking-[0.2em] text-white/50 mb-4">Company</div>
-          <ul className="space-y-3 text-sm">
-            <li><Link to="/about" className="hover:text-[var(--timber)]">About</Link></li>
-            <li><Link to="/services" className="hover:text-[var(--timber)]">Services</Link></li>
-            <li><Link to="/projects" className="hover:text-[var(--timber)]">Projects</Link></li>
-            <li><Link to="/why-choose" className="hover:text-[var(--timber)]">Why Choose Us</Link></li>
-            <li><Link to="/contact" className="hover:text-[var(--timber)]">Contact</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <div className="text-xs uppercase tracking-[0.2em] text-white/50 mb-4">Contact</div>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-[var(--timber)]" /> 0436802414</li>
-            <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-[var(--timber)]" /> Michael@rippleconstruction.com.au</li>
-            <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-[var(--timber)]" /> Brisbane · Moreton Bay · Sunshine Coast</li>
-          </ul>
-        </div>
-      </div>
-      <div className="border-t border-white/10">
-        <div className="container-x py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
-          <div>© {new Date().getFullYear()} Ripple Construction Pty Ltd. All rights reserved.</div>
-          <div>ABN 41 682 614 517 · Fully Insured</div>
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer className="bg-ink text-bone"><div className="container-x py-16 md:py-20 grid gap-12 md:grid-cols-4"><div className="md:col-span-2"><div className="flex items-center gap-2"><span className="grid h-10 w-10 place-items-center rounded-md bg-bone text-ink font-display font-bold">R</span><div><div className="font-display text-xl font-bold">Ripple Construction</div><div className="text-xs text-bone/60">Owner-operated carpentry & excavation</div></div></div><p className="mt-6 max-w-md text-sm text-bone/70 leading-relaxed">Decks, fences and retaining walls, built properly. Carpentry and excavation for homeowners across Brisbane and Moreton Bay, with dedicated subcontracting for builders.</p><div className="mt-6 flex flex-wrap gap-5 text-sm"><a href="https://www.instagram.com/ripple.construction" target="_blank" rel="noopener noreferrer" className="inline-flex gap-2 items-center hover:text-timber"><Instagram className="h-4 w-4" />Instagram</a><a href={GOOGLE_PROFILE} target="_blank" rel="noopener noreferrer" className="inline-flex gap-2 items-center hover:text-timber">Google Business Profile<ArrowUpRight className="h-4 w-4" /></a></div></div><div><h2 className="text-xs uppercase text-bone/60 mb-4">Company</h2><ul className="space-y-3 text-sm">{([{ to: '/about', label: 'About' }, { to: '/services', label: 'Services' }, { to: '/projects', label: 'Projects' }, { to: '/for-builders', label: 'For Builders' }, { to: '/why-choose', label: 'Why Choose Us' }, { to: '/contact', label: 'Contact' }] as const).map(n => <li key={n.to}><Link to={n.to} className="hover:text-timber">{n.label}</Link></li>)}</ul></div><div className="min-w-0"><h2 className="text-xs uppercase text-bone/60 mb-4">Contact</h2><ul className="space-y-3 text-sm"><li><a href="tel:+61436802414" className="flex items-center gap-2"><Phone className="h-4 w-4 shrink-0 text-timber" />0436 802 414</a></li><li><a href="mailto:Michael@rippleconstruction.com.au" className="flex items-start gap-2"><Mail className="h-4 w-4 shrink-0 text-timber" /><span className="break-words min-w-0">Michael@rippleconstruction.com.au</span></a></li><li className="flex items-start gap-2"><MapPin className="h-4 w-4 shrink-0 text-timber" />Brisbane · Moreton Bay · Brisbane North suburbs</li></ul></div></div><div className="border-t border-bone/10"><div className="container-x py-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-bone/60"><div>© {new Date().getFullYear()} Ripple Construction Pty Ltd. All rights reserved.</div><div>QBCC Licence 15545513 · ABN 41 682 614 517</div></div></div></footer>;
 }

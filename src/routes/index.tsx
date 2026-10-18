@@ -1,272 +1,37 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Hammer, Clock, CheckCircle2 } from "lucide-react";
-import hero from "@/assets/hero.jpg";
-import framing from "@/assets/framing.jpg";
-import cladding from "@/assets/cladding.jpg";
-import fitoff from "@/assets/fitoff.jpg";
-import deck from "@/assets/deck.jpg";
-import fencing from "@/assets/fencing.jpg";
-import retainingWall from "@/assets/retaining-wall.jpg";
-import archDoorAsset from "@/assets/arch_door.jpg";
-import shedAsset from "@/assets/shed.jpg";
-import wardrobeAsset from "@/assets/wardrobe.webp";
-import featureBeamsAsset from "@/assets/feature_beams.jpg";
-import speedpanelAsset from "@/assets/speedpanel.jpg";
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { ArrowRight, Phone, ShieldCheck, Star } from 'lucide-react';
+import hero from '@/assets/project2.jpg';
+import projectDeck from '@/assets/project1.jpg';
+import wardrobe from '@/assets/wardrobe.webp';
+import lawn from '@/assets/lawn_1.jpg';
+import { Reveal } from '@/components/site/Reveal';
+import { QuoteForm } from '@/components/site/QuoteForm';
+import { Button } from '@/components/ui/button';
+import { HOME_SERVICES, AREAS, GOOGLE_PROFILE, servicePrice } from '@/lib/site-content';
+import { pageHead } from '@/lib/seo';
 
-const archDoor = archDoorAsset;
-const shed = shedAsset;
-const wardrobe = wardrobeAsset;
-const featureBeams = featureBeamsAsset;
-const cta = speedpanelAsset;
-import { Reveal } from "@/components/site/Reveal";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Carpentry Subcontractors Brisbane | Ripple Construction" },
-      {
-        name: "description",
-        content:
-          "Ripple Construction provides reliable carpentry subcontracting across Brisbane, Moreton Bay and the Sunshine Coast, including framing, cladding, fit-off, fencing, retaining walls and structural carpentry.",
-      },
-      { property: "og:title", content: "Ripple Construction — Carpentry Subcontractors QLD" },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
+export const Route = createFileRoute('/')({
+  head: () => pageHead('Decks, Fencing & Retaining Walls Brisbane | Ripple Construction', 'Owner-operated carpentry and excavation across Brisbane and Moreton Bay. Decks from $450 per m², fencing from $130 per metre and retaining walls from $350 per m². Get a free quote.', '/'),
   component: Home,
 });
-
-const VALUES = [
-  { icon: ShieldCheck, title: "Reliable & Professional", body: "Trusted by builders, developers and homeowners to show up, communicate and deliver — every project, every time." },
-  { icon: Hammer, title: "Quality Workmanship", body: "Qualified carpenters producing precise, code-compliant work you can put your name to." },
-  { icon: Clock, title: "On-Time Delivery", body: "Efficient scheduling and disciplined crews keep your program moving without surprises." },
-];
-
-const SERVICES = [
-  { title: "Timber Framing", body: "Wall, floor and roof framing set out and stood true to plan.", img: framing, to: "/services" as const },
-  { title: "External Cladding", body: "Weatherboard, composite and architectural cladding installed straight.", img: cladding, to: "/services" as const },
-  { title: "Internal Fit-Off", body: "Flooring, doors, skirtings, architraves and joinery installation.", img: fitoff, to: "/services" as const },
-  { title: "Decks & Structures", body: "Decking, stairs, pergolas and outdoor structures built to last.", img: deck, to: "/services" as const },
-  { title: "Fencing", body: "Timber, slat and Colourbond boundary fencing built dead straight.", img: fencing, to: "/services" as const },
-  { title: "Retaining Walls", body: "Engineered concrete sleeper retaining walls that hold the line.", img: retainingWall, to: "/services" as const },
-];
-
 const PROJECTS = [
-  { title: "Arched Timber Entry Doors", tag: "Fit-Off & Joinery", img: archDoor, alt: "Custom arched timber double entry doors installed in a new home" },
-  { title: "Steel Shed Frame", tag: "Structural Carpentry", img: shed, alt: "Structural steel shed frame erected on a new concrete slab" },
-  { title: "Built-In Wardrobe", tag: "Internal Fit-Off", img: wardrobe, alt: "Finished built-in wardrobe with shelving, hanging rails and lighting" },
+  { title: 'Deck & Stairs', img: projectDeck, alt: 'Finished deck steps with timber-look boards and horizontal fascia', materials: 'Decking boards and matching fascia' },
+  { title: 'Built-In Wardrobe', img: wardrobe, alt: 'White built-in wardrobe with shelves, hanging rails and recessed lighting', materials: 'White shelving and hanging rails' },
+  { title: 'Site Finish & Garden Edging', img: lawn, alt: 'Lawn and mulched garden beds with timber edging around a raised home', materials: 'Turf, mulch and timber edging' },
 ];
-
-
 function Home() {
-  return (
-    <>
-      {/* HERO */}
-      <section className="relative min-h-[100svh] flex items-end overflow-hidden">
-        <img
-          src={hero}
-          alt="Timber-framed home under construction at dusk"
-          width={1920}
-          height={1200}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--ink)] via-[var(--ink)]/60 to-[var(--ink)]/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,0,0,0.55),transparent_60%)]" />
-
-        <div className="relative container-x pt-32 pb-16 md:pb-24 text-[var(--bone)]">
-          <Reveal>
-            <span className="eyebrow-light">
-              <span className="h-px w-8 bg-[var(--timber)]" />
-              South East Queensland
-            </span>
-          </Reveal>
-          <Reveal delay={100}>
-            <h1 className="mt-5 font-display font-bold text-[clamp(2.4rem,6vw,5.25rem)] leading-[0.98] max-w-5xl">
-              Carpentry Subcontractors in <span className="text-[var(--timber)]">Brisbane, Moreton Bay</span> &amp; Sunshine Coast
-            </h1>
-          </Reveal>
-          <Reveal delay={200}>
-            <p className="mt-6 max-w-2xl text-lg md:text-xl text-white/80 leading-relaxed">
-              Reliable commercial and residential carpentry subcontractors delivering framing,
-              cladding, fit-off, fencing, retaining walls and structural carpentry across South
-              East Queensland.
-            </p>
-          </Reveal>
-          <Reveal delay={300}>
-            <div className="mt-9 flex flex-wrap items-center gap-3">
-              <Link to="/contact" className="btn-timber">
-                Request a Quote <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/services" className="btn-ghost-light">Our Services</Link>
-            </div>
-          </Reveal>
-
-          <Reveal delay={400}>
-            <div className="mt-14 grid grid-cols-3 max-w-2xl gap-6 border-t border-white/15 pt-8">
-              {[
-                ["10+", "Years On Site"],
-                ["150+", "Projects Delivered"],
-                ["100%", "Insured & Qualified"],
-              ].map(([n, l]) => (
-                <div key={l}>
-                  <div className="font-display text-3xl md:text-4xl font-bold text-[var(--timber)]">{n}</div>
-                  <div className="mt-1 text-xs uppercase tracking-widest text-white/60">{l}</div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* VALUES */}
-      <section className="py-20 md:py-28">
-        <div className="container-x">
-          <div className="grid gap-8 md:grid-cols-3">
-            {VALUES.map((v, i) => (
-              <Reveal key={v.title} delay={i * 100}>
-                <div className="group h-full rounded-2xl border border-border bg-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-[var(--ink)] text-[var(--bone)] group-hover:bg-[var(--timber)] transition-colors">
-                    <v.icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-6 font-display text-xl font-bold">{v.title}</h3>
-                  <p className="mt-3 text-muted-foreground leading-relaxed">{v.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT INTRO */}
-      <section className="py-20 md:py-28 bg-secondary/40">
-        <div className="container-x grid gap-12 md:grid-cols-2 md:items-center">
-          <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={featureBeams} alt="Exposed timber feature beams and posts in a finished open-plan interior" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
-              <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-[var(--ink)]/85 backdrop-blur p-4 text-[var(--bone)] flex items-center gap-3">
-                <div className="h-10 w-10 rounded-lg bg-[var(--timber)] grid place-items-center font-display font-bold">R</div>
-                <div>
-                  <div className="text-sm font-semibold">Ripple Construction Pty Ltd</div>
-                  <div className="text-xs text-white/70">Qualified · Insured · QLD-based</div>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-          <Reveal delay={150}>
-            <span className="eyebrow"><span className="h-px w-8 bg-[var(--timber)]" />About Ripple</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-tight">
-              Carpentry subcontractors builders actually rebook.
-            </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              Ripple Construction is a dedicated carpentry subcontractor working with builders,
-              developers, construction companies and homeowners across South East Queensland. From
-              large-scale framing packages to fencing, retaining walls and detailed fit-off work,
-              we bring the same standards to every site: clean workmanship, tight schedules and
-              clear communication.
-            </p>
-            <ul className="mt-6 space-y-3">
-              {["Qualified, safety-focused carpenters", "Framing, cladding, fit-off, fencing & retaining walls", "Servicing Brisbane, Moreton Bay & Sunshine Coast"].map((t) => (
-                <li key={t} className="flex items-start gap-3 text-foreground">
-                  <CheckCircle2 className="h-5 w-5 text-[var(--timber)] mt-0.5 shrink-0" />
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8">
-              <Link to="/about" className="btn-primary">More about us <ArrowRight className="h-4 w-4" /></Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section className="py-20 md:py-28">
-        <div className="container-x">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <div className="max-w-2xl">
-              <span className="eyebrow"><span className="h-px w-8 bg-[var(--timber)]" />What we do</span>
-              <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-tight">Featured carpentry services</h2>
-            </div>
-            <Link to="/services" className="text-sm font-semibold inline-flex items-center gap-1 hover:text-[var(--timber-deep)]">
-              All services <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((s, i) => (
-              <Reveal key={s.title} delay={i * 80}>
-                <Link to={s.to} className="group block overflow-hidden rounded-2xl border border-border bg-card hover:shadow-[var(--shadow-elegant)] transition-all duration-300 hover:-translate-y-1">
-                  <div className="relative aspect-[4/5] overflow-hidden">
-                    <img src={s.img} alt={s.title} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                    <div className="absolute inset-x-0 bottom-0 p-5 text-[var(--bone)]">
-                      <div className="font-display text-lg font-bold">{s.title}</div>
-                      <div className="mt-1 text-xs text-white/80">{s.body}</div>
-                    </div>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROJECTS */}
-      <section className="py-20 md:py-28 bg-secondary/40">
-        <div className="container-x">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <div>
-              <span className="eyebrow"><span className="h-px w-8 bg-[var(--timber)]" />Recent work</span>
-              <h2 className="mt-4 font-display text-4xl md:text-5xl font-bold leading-tight">Selected projects</h2>
-            </div>
-            <Link to="/projects" className="text-sm font-semibold inline-flex items-center gap-1 hover:text-[var(--timber-deep)]">
-              View all projects <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {PROJECTS.map((p, i) => (
-              <Reveal key={p.title} delay={i * 100}>
-                <div className="group overflow-hidden rounded-2xl bg-card border border-border">
-                  <div className="relative aspect-[5/6] overflow-hidden">
-                    <img src={p.img} alt={p.alt} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  </div>
-                  <div className="p-6">
-                    <div className="text-xs uppercase tracking-widest text-[var(--timber-deep)] font-semibold">{p.tag}</div>
-                    <div className="mt-2 font-display text-xl font-bold">{p.title}</div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* CTA */}
-      <section className="relative overflow-hidden">
-        <img src={cta} alt="Speedpanel wall panels stacked on a commercial high-rise site" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-[var(--ink)]/80" />
-        <div className="relative container-x py-24 md:py-32 text-[var(--bone)]">
-          <Reveal>
-            <div className="max-w-3xl">
-              <span className="eyebrow-light"><span className="h-px w-8 bg-[var(--timber)]" />Working on your next build?</span>
-              <h2 className="mt-4 font-display text-4xl md:text-6xl font-bold leading-tight">
-                Let's talk about your upcoming project.
-              </h2>
-              <p className="mt-6 text-white/80 max-w-xl">
-                Send us the plans, timelines and scope. We'll come back with a straight answer,
-                a fair price and a crew ready to deliver.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link to="/contact" className="btn-timber">Request a Quote <ArrowRight className="h-4 w-4" /></Link>
-                <a href="tel:+61436802414" className="btn-ghost-light">Call 0436802414</a>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-    </>
-  );
+  return <>
+    <section className="relative min-h-[660px] md:min-h-[700px] flex items-end overflow-hidden">
+      <img src={hero} alt="Completed Colorbond fencing beside a Queensland home" className="absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
+      <div className="absolute inset-0 bg-ink/65" />
+      <div className="relative container-x pt-36 pb-16 md:pb-20 text-bone"><Reveal><span className="eyebrow-light">Brisbane & Moreton Bay</span><h1 className="mt-5 font-display font-bold text-4xl md:text-6xl leading-tight max-w-4xl">Decks, fences and retaining walls, built properly.</h1><p className="mt-6 max-w-2xl text-lg md:text-xl text-bone/85 leading-relaxed">Owner-operated carpentry and excavation across Brisbane and Moreton Bay. The person who quotes your job builds it.</p><div className="mt-9 flex flex-wrap gap-3"><Button asChild className="btn-timber h-auto"><a href="#quote">Get a free quote<ArrowRight /></a></Button><Button asChild variant="ghost" className="btn-ghost-light h-auto"><a href="tel:+61436802414"><Phone />Call 0436 802 414</a></Button></div></Reveal></div>
+    </section>
+    <section className="border-b border-border bg-background"><div className="container-x grid grid-cols-2 lg:grid-cols-4 gap-5 py-7">{['QBCC licensed 15545513', 'Fully insured', '10+ years on site', '150+ projects delivered'].map(t => <div key={t} className="flex items-center gap-3 text-sm font-semibold"><ShieldCheck className="h-5 w-5 shrink-0 text-timber-deep" />{t}</div>)}</div></section>
+    <section className="py-20 md:py-28"><div className="container-x"><Reveal><span className="eyebrow">What we do</span><h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">Built for your home.</h2></Reveal><div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{HOME_SERVICES.map((s, i) => <Reveal key={s.title} delay={i * 80}><Link to={s.to} className="group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card hover:shadow-[var(--shadow-elegant)] transition-shadow"><div className="aspect-[4/5] overflow-hidden"><img src={s.img} alt={s.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div><div className="p-5 flex flex-1 flex-col"><h3 className="font-display text-xl font-bold">{s.title}</h3><p className="mt-3 text-sm text-muted-foreground">{s.description}</p><p className="mt-auto pt-5 text-sm font-semibold text-timber-deep">{servicePrice(s)}</p><ArrowRight className="mt-4 h-4 w-4" /></div></Link></Reveal>)}</div></div></section>
+    <section className="py-20 bg-secondary/40"><div className="container-x"><Reveal><span className="eyebrow">Straightforward from the start</span><h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">How it works</h2></Reveal><ol className="mt-12 grid gap-10 md:grid-cols-3">{['Send us photos and rough measurements.', 'Get a ballpark price within 48 hours.', 'We measure up and give you a fixed, itemised quote.'].map((t, i) => <li key={t}><div className="font-display text-4xl font-bold text-timber-deep">0{i + 1}</div><p className="mt-4 text-lg font-medium">{t}</p></li>)}</ol></div></section>
+    <section className="py-20 md:py-28"><div className="container-x"><div className="flex flex-wrap justify-between items-end gap-6"><div><span className="eyebrow">Recent work</span><h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">Selected projects</h2></div><Link to="/projects" className="inline-flex items-center gap-2 text-sm font-semibold">View all projects<ArrowRight className="h-4 w-4" /></Link></div><div className="mt-12 grid gap-6 md:grid-cols-3">{PROJECTS.map(p => <Reveal key={p.title}><article className="overflow-hidden rounded-lg border border-border bg-card"><div className="aspect-[5/6]"><img src={p.img} alt={p.alt} loading="lazy" className="h-full w-full object-cover" /></div><div className="p-6"><h3 className="font-display text-xl font-bold">{p.title}</h3><dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 text-sm"><dt className="text-muted-foreground">Suburb</dt><dd>Not recorded</dd><dt className="text-muted-foreground">Size</dt><dd>Not recorded</dd><dt className="text-muted-foreground">Materials</dt><dd>{p.materials}</dd><dt className="text-muted-foreground">Build time</dt><dd>Not recorded</dd></dl></div></article></Reveal>)}</div></div></section>
+    <section className="py-20 bg-secondary/40"><div className="container-x"><span className="eyebrow">Reviews</span><h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">What homeowners say</h2><div className="mt-10 grid gap-6 md:grid-cols-3">{[1, 2, 3].map(i => <article key={i} className="rounded-lg border border-border bg-card p-7"><span className="text-xs font-semibold text-muted-foreground">Placeholder — not a customer review</span><div className="mt-4 flex gap-1 text-timber-deep" aria-label="Five-star placeholder">{[1,2,3,4,5].map(s => <Star key={s} className="h-4 w-4" />)}</div><p className="mt-5 text-muted-foreground">[Google review text]</p><div className="mt-6 font-semibold">[Customer name]</div><div className="mt-1 text-sm text-muted-foreground">[Suburb]</div></article>)}</div><Button asChild variant="outline" className="mt-8 h-auto py-4"><a href={GOOGLE_PROFILE} target="_blank" rel="noopener noreferrer">Read our Google reviews<ArrowRight /></a></Button></div></section>
+    <section className="py-20"><div className="container-x"><span className="eyebrow">Local to you</span><h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">Areas we service</h2><ul className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-3 text-muted-foreground">{AREAS.map(a => <li key={a}>{a}</li>)}</ul><p className="mt-6 text-muted-foreground">And surrounding Brisbane North suburbs.</p></div></section>
+    <section id="quote" className="scroll-mt-24 py-20 md:py-28 bg-secondary/40"><div className="container-x grid gap-12 lg:grid-cols-[1fr_1.2fr]"><div><span className="eyebrow">Let's talk about your job</span><h2 className="mt-4 font-display text-4xl md:text-5xl font-bold">Get a free quote</h2><p className="mt-6 text-lg text-muted-foreground">Send Michael your photos, rough measurements and what you have in mind. You'll hear back within 1 business day.</p><a href="tel:+61436802414" className="mt-8 inline-flex items-center gap-3 font-semibold"><Phone className="h-5 w-5 text-timber-deep" />0436 802 414</a></div><div className="border border-border bg-card rounded-lg p-6 md:p-10"><QuoteForm /></div></div></section>
+  </>;
 }
