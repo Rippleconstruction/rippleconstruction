@@ -25,6 +25,25 @@ export const SERVICE_PAGES: ServicePageContent[] = [
     ]
   },
   {
+    heading: 'Pergolas Brisbane & Moreton Bay', jobType: 'Pergola',
+    intro: [
+      'A pergola makes your outdoor space a more comfortable place to spend time, whether you want an open timber feature over a garden or a roofed area for meals and afternoons outside. Ripple Construction designs and builds timber and steel pergolas for homeowners across Brisbane and Moreton Bay. Michael helps you choose a layout that suits your home, the way you use your yard and the finish you have in mind.',
+      'Open pergolas provide definition and filtered shade, while roofed designs offer more protection from the weather. Roofing options include Colorbond, insulated panels and polycarbonate. Each handles light, heat and rain differently, so we discuss the practical trade-offs alongside appearance and budget. Timber offers natural character; steel can suit a clean-lined design. The final structure and connections are designed for the span, roofing and site conditions, not chosen on looks alone.',
+      'We build attached and freestanding pergolas, including flyover-style roofs and pergolas over new or existing decks. If you are planning both, we design and build the deck and pergola together as one job, considering posts, levels, roof drainage and access from the start. For an existing deck, we check its frame, footings and condition before confirming what it can support. Preparation for lighting and fan wiring can be included, with electrical installation carried out by a licensed electrician.',
+      'From North Lakes and Albany Creek to Narangba and Strathpine, send photos and rough measurements to start the conversation. We also work in Redcliffe, Caboolture and Chermside. Michael checks house connections, boundaries, access and approval requirements at the quote; many roofed or attached pergolas need building approval. The person who quotes your job builds it, giving you one point of contact. You receive a fixed, itemised quote with the scope agreed upfront. Send us photos for a free ballpark price.'
+    ],
+    builds: ['Open timber pergolas', 'Roofed pergolas: Colorbond, insulated panel and polycarbonate', 'Attached and freestanding pergolas', 'Pergolas over new or existing decks', 'Flyover-style roofs', 'Lighting and fan wiring prep — electrical installation by a licensed electrician'],
+    prices: [{ label: 'Pergolas', min: null, max: null, unit: 'Starting price per m² installed to be confirmed' }],
+    gallery: ['Open timber pergola', 'Colorbond roofed pergola', 'Insulated panel roof', 'Polycarbonate roof', 'Pergola over a deck', 'Freestanding and flyover-style designs'],
+    faqs: [
+      { question: 'How much does a pergola cost in Brisbane?', answer: 'Our starting price per m² installed is to be confirmed. Materials, roof type, span, foundations, house connections, access and approvals affect the total. Every job is different. Send us photos for a free ballpark price, followed by a fixed, itemised quote.' },
+      { question: 'Do I need council approval for a pergola?', answer: 'Many roofed or attached pergolas need building approval, especially near boundaries. We will check this at the quote and confirm any certifier or council requirements for your property and design before work proceeds.' },
+      { question: 'Timber or steel?', answer: 'Timber offers a natural look and can need regular coating and maintenance. Steel suits clean-lined designs with its own protective finish and maintenance requirements. We compare appearance, budget, roof choice and the structure needed for your site before recommending an option.' },
+      { question: 'Can you build a pergola over my existing deck?', answer: 'Yes, subject to checking the deck’s frame, footings, condition and capacity for the proposed pergola. Extra supports or upgrades may be needed. If you are planning a new deck, we can design and build the deck and pergola together as one job.' },
+      { question: 'How long does it take?', answer: 'Build time depends on the size, structure, roofing, site access and any approvals or deck upgrades. Michael discusses the expected timeframe with your itemised quote once the scope and site requirements are confirmed.' }
+    ]
+  },
+  {
     heading: 'Fencing Contractor Brisbane & Moreton Bay', jobType: 'Fence',
     intro: [
       'A good fence gives your home privacy, a clear boundary and a tidy finish without making the yard harder to use. Ripple Construction installs Colorbond and timber paling fences for homeowners across Brisbane and Moreton Bay. We can include single or double gates and removal of the old fence, so the whole job is considered together rather than leaving you to organise the awkward parts separately.',
