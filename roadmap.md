@@ -1,4 +1,6 @@
 # Homeowner-first website
+- [ ] Update all page metadata and business/FAQ structured data.
+- [ ] Optimise images and descriptive alt text; verify sitemap, robots and mobile loading.
 - [x] Expand four service pages with homeowner introductions, scope, price guides, placeholder galleries and FAQs.
 - [x] Pre-select each service in the shared quote form and verify all four enquiry flows.
 - [x] Restructure homepage, navigation, footer and create four service pages plus For Builders.
