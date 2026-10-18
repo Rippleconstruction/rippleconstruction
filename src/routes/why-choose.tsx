@@ -1,21 +1,12 @@
+import { JobPhoto } from '@/components/site/JobPhoto';
+import { pageHead } from '@/lib/seo';
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Award, ShieldCheck, HardHat, Users, ClipboardCheck, CalendarClock, MapPin } from "lucide-react";
-import cta from "@/assets/project1.jpg";
+import cta from "@/assets/project1.webp";
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/why-choose")({
-  head: () => ({
-    meta: [
-      { title: "Why Choose Ripple Construction — Qualified Carpentry Subcontractors QLD" },
-      { name: "description", content: "Qualified, insured and safety-focused carpentry subcontractors delivering reliable workmanship and efficient scheduling across South East Queensland." },
-      { property: "og:title", content: "Why Choose Ripple Construction" },
-      { property: "og:url", content: "https://www.rippleconstruction.com.au/why-choose" },
-      { property: "og:description", content: "Qualified, insured and safety-focused carpentry with reliable workmanship from Ripple Construction." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "https://www.rippleconstruction.com.au/why-choose" }],
-  }),
+  head: () => pageHead('Why Choose Us Brisbane & Moreton Bay | Ripple Construction', 'Choose qualified, insured carpenters with clear communication and reliable workmanship for your Brisbane or Moreton Bay home or building project.', '/why-choose'),
   component: WhyChoose,
 });
 
@@ -66,7 +57,7 @@ function WhyChoose() {
       </section>
 
       <section className="relative overflow-hidden">
-        <img src={cta} alt="Ripple Construction carpentry work on a real job site" loading="lazy" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
+        <JobPhoto src={cta} alt="Composite deck with timber stairs and fascia boards" loading="lazy" sizes="(min-width: 1024px) 50vw, 100vw" width={1920} height={900} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[var(--ink)]/80" />
         <div className="relative container-x py-24 md:py-32 text-[var(--bone)] text-center">
           <Reveal>

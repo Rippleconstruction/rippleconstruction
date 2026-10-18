@@ -13,3 +13,5 @@
 - Use one shared quote form and validated multipart contact endpoint; store enquiries and photos privately with server-only privileged access because submissions contain personal information.
 - Send quote notifications through the existing Resend integration with a fixed recipient, customer Reply-To and validated image attachments; only confirm success after the provider returns an email ID.
 - Keep unconfirmed project measurements, suburbs and build times explicitly unknown; separate sample reviews from genuine reviews to avoid misleading visitors.
+- Use the shared pageHead helper for leaf metadata and business JSON-LD; derive service FAQ JSON-LD from the displayed FAQ data to prevent mismatched answers.
+- Render bundled job photos through JobPhoto with desktop/mobile WebP variants and intrinsic dimensions; keep hero photos eager and below-the-fold photos lazy to reduce mobile downloads without changing layout.

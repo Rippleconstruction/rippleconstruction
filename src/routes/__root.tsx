@@ -67,21 +67,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ripple Construction — Carpentry Subcontractors Brisbane, Moreton Bay & Sunshine Coast" },
-      {
-        name: "description",
-        content:
-          "Reliable carpentry subcontractors delivering timber framing, cladding, fit-off and structural carpentry across South East Queensland.",
-      },
       { name: "author", content: "Ripple Construction Pty Ltd" },
       { property: "og:site_name", content: "Ripple Construction" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Ripple Construction — Carpentry Subcontractors QLD" },
-      {
-        property: "og:description",
-        content:
-          "Framing, cladding, fit-off and structural carpentry for builders and developers across Brisbane, Moreton Bay and the Sunshine Coast.",
-      },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

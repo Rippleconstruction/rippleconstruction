@@ -1,47 +1,38 @@
+import { JobPhoto } from '@/components/site/JobPhoto';
+import { pageHead } from '@/lib/seo';
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import framing from "@/assets/framing.jpg";
-import roof from "@/assets/roof-framing.jpg";
-import cladding from "@/assets/cladding.jpg";
-import fitoff from "@/assets/fitoff.jpg";
-import deck from "@/assets/deck.jpg";
-import fencing from "@/assets/fencing.jpg";
-import retainingWall from "@/assets/retaining-wall.jpg";
-import hero from "@/assets/hero.jpg";
-import shedAsset from "@/assets/shed.jpg";
-import archDoorAsset from "@/assets/arch_door.jpg";
+import framing from "@/assets/framing.webp";
+import roof from "@/assets/roof-framing.webp";
+import cladding from "@/assets/cladding.webp";
+import fitoff from "@/assets/fitoff.webp";
+import deck from "@/assets/deck.webp";
+import fencing from "@/assets/fencing.webp";
+import retainingWall from "@/assets/retaining-wall.webp";
+import hero from "@/assets/hero.webp";
+import shedAsset from "@/assets/shed.webp";
+import archDoorAsset from "@/assets/arch_door.webp";
 
 const shed = shedAsset;
 const archDoor = archDoorAsset;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Carpentry Services — Framing, Cladding, Fencing & Retaining Walls | Ripple Construction" },
-      { name: "description", content: "Carpentry subcontractor services in QLD: timber framing, wall & roof framing, structural carpentry, external cladding, internal fit-off, decks, fencing, retaining walls and renovations." },
-      { property: "og:title", content: "Carpentry Services — Ripple Construction" },
-      { property: "og:url", content: "https://www.rippleconstruction.com.au/services" },
-      { property: "og:description", content: "Explore decks, fencing, retaining walls, excavation and carpentry subcontracting by Ripple Construction." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "https://www.rippleconstruction.com.au/services" }],
-  }),
+  head: () => pageHead('Carpentry Services Brisbane & Moreton Bay | Ripple Construction', 'Explore timber framing, cladding, fit-off, decks, fencing and retaining walls for homeowners and builders across Brisbane and Moreton Bay.', '/services'),
   component: Services,
 });
 
 const SERVICES = [
-  { title: "Timber Framing", body: "Precision timber framing for residential and commercial builds — cut to plan, stood true, ready for inspection.", img: framing },
-  { title: "Wall & Roof Framing", body: "Full wall and roof framing packages, from single dwellings to multi-lot developments.", img: roof },
-  { title: "Structural Carpentry", body: "Structural steel and shed framing, load-bearing carpentry and structural set-out executed to engineering specifications and Australian standards.", img: shed },
-  { title: "External Cladding", body: "Weatherboard, composite, timber-look and architectural cladding — installed clean and straight.", img: cladding },
-  { title: "Internal Fixing & Fit-Off", body: "Doors, skirtings, architraves, linings and joinery installation with a sharp finish.", img: fitoff },
-  { title: "Decks & Outdoor Structures", body: "Hardwood decks, pergolas, screens and outdoor timber structures built to last.", img: deck },
-  { title: "Fencing", body: "Timber fencing, slat screens, boundary fences and privacy walls — built straight and built to last.", img: fencing },
-  { title: "Retaining Walls", body: "Engineered timber sleeper and concrete retaining walls that hold the line and look sharp.", img: retainingWall },
-  { title: "Renovations", body: "Carpentry-led renovations and extensions — custom entry doors, character upgrades and detailed carpentry from Queenslander work to modern rebuilds.", img: archDoor },
-  { title: "General Carpentry", body: "Site carpentry, temporary works, remedial repairs and everything in between.", img: hero },
+  { title: "Timber Framing", body: "Precision timber framing for residential and commercial builds — cut to plan, stood true, ready for inspection.", img: framing, alt: "Timber floor and roof framing with steel beams"},
+  { title: "Wall & Roof Framing", body: "Full wall and roof framing packages, from single dwellings to multi-lot developments.", img: roof, alt: "Timber and steel wall framing with wall linings and service openings"},
+  { title: "Structural Carpentry", body: "Structural steel and shed framing, load-bearing carpentry and structural set-out executed to engineering specifications and Australian standards.", img: shed, alt: "Steel shed frame on a concrete slab"},
+  { title: "External Cladding", body: "Weatherboard, composite, timber-look and architectural cladding — installed clean and straight.", img: cladding, alt: "Horizontal external cladding on a raised home"},
+  { title: "Internal Fixing & Fit-Off", body: "Doors, skirtings, architraves, linings and joinery installation with a sharp finish.", img: fitoff, alt: "Hybrid timber-look flooring in a finished interior"},
+  { title: "Decks & Outdoor Structures", body: "Hardwood decks, pergolas, screens and outdoor timber structures built to last.", img: deck, alt: "Composite deck with horizontal fascia boards"},
+  { title: "Fencing", body: "Timber fencing, slat screens, boundary fences and privacy walls — built straight and built to last.", img: fencing, alt: "Timber paling boundary fence"},
+  { title: "Retaining Walls", body: "Engineered timber sleeper and concrete retaining walls that hold the line and look sharp.", img: retainingWall, alt: "Concrete sleeper retaining wall with steel posts"},
+  { title: "Renovations", body: "Carpentry-led renovations and extensions — custom entry doors, character upgrades and detailed carpentry from Queenslander work to modern rebuilds.", img: archDoor, alt: "Arched timber double entry doors"},
+  { title: "General Carpentry", body: "Site carpentry, temporary works, remedial repairs and everything in between.", img: hero, alt: "Timber wall framing on a concrete slab"},
 ];
 
 function Services() {
@@ -72,7 +63,7 @@ function Services() {
                 <Reveal key={s.title}>
                   <article className={`grid gap-8 md:grid-cols-2 md:items-center ${reverse ? "md:[&>div:first-child]:order-2" : ""}`}>
                     <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-                      <img src={s.img} alt={s.title} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
+                      <JobPhoto src={s.img} alt={s.alt} loading="lazy" sizes="(min-width: 1024px) 50vw, 100vw" width={1400} height={1000} className="h-full w-full object-cover" />
                     </div>
                     <div>
                       <div className="text-xs uppercase tracking-[0.2em] text-[var(--timber-deep)] font-semibold">

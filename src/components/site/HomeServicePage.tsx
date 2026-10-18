@@ -1,3 +1,4 @@
+import { JobPhoto } from './JobPhoto';
 import { ArrowRight, CheckCircle2, ImagePlus, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
@@ -12,7 +13,7 @@ export function HomeServicePage({ index }: { index: number }) {
   if (!service || !content) return null;
   return <>
     <section className="relative flex min-h-[560px] items-end overflow-hidden">
-      <img src={service.img} alt={service.alt} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
+      <JobPhoto src={service.img} alt={service.alt} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-ink/65" />
       <div className="relative container-x w-full pt-36 pb-16 text-bone"><Reveal>
         <span className="eyebrow-light">Owner-operated. Built properly.</span>

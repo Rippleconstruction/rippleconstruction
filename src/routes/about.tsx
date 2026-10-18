@@ -1,25 +1,16 @@
+import { JobPhoto } from '@/components/site/JobPhoto';
+import { pageHead } from '@/lib/seo';
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, HardHat, Handshake, MessagesSquare, Shield } from "lucide-react";
-import lawnAsset from "@/assets/lawn_1.jpg";
-import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg";
+import lawnAsset from "@/assets/lawn_1.webp";
+import retainingFinishAsset from "@/assets/retaining_wall_finish.webp";
 
 const Frame = lawnAsset;
 const Shed = retainingFinishAsset;
 import { Reveal } from "@/components/site/Reveal";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Ripple Construction — QLD Carpentry Subcontractors" },
-      { name: "description", content: "Ripple Construction is a dependable carpentry subcontractor committed to quality workmanship, safety and long-term relationships with builders, developers and homeowners across South East Queensland." },
-      { property: "og:title", content: "About Ripple Construction" },
-      { property: "og:url", content: "https://www.rippleconstruction.com.au/about" },
-      { property: "og:description", content: "About Ripple Construction: owner-operated carpentry, excavation and builder subcontracting in South East Queensland." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "https://www.rippleconstruction.com.au/about" }],
-  }),
+  head: () => pageHead('About Us Brisbane & Moreton Bay | Ripple Construction', 'Meet Ripple Construction, an owner-operated, qualified carpentry and excavation business helping homeowners and builders across Brisbane and Moreton Bay.', '/about'),
   component: About,
 });
 
@@ -52,7 +43,7 @@ function About() {
         <div className="container-x grid gap-12 md:grid-cols-2 md:items-center">
           <Reveal>
             <div className="aspect-[4/5] overflow-hidden rounded-2xl">
-              <img src={Frame} alt="Finished lawn and curved garden edging around a completed Ripple Construction home project" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
+              <JobPhoto src={Frame} alt="Turf lawn with mulched garden beds and curved timber edging" loading="lazy" sizes="(min-width: 1024px) 50vw, 100vw" width={1400} height={1000} className="h-full w-full object-cover" />
             </div>
           </Reveal>
           <Reveal delay={150}>
@@ -127,7 +118,7 @@ function About() {
           </Reveal>
           <Reveal>
             <div className="aspect-[4/3] overflow-hidden rounded-2xl">
-              <img src={Shed} alt="Finished retaining wall with fencing on a South East Queensland property" loading="lazy" width={1400} height={1000} className="h-full w-full object-cover" />
+              <JobPhoto src={Shed} alt="Concrete sleeper retaining wall with steel posts and wire fencing" loading="lazy" sizes="(min-width: 1024px) 50vw, 100vw" width={1400} height={1000} className="h-full w-full object-cover" />
             </div>
           </Reveal>
         </div>

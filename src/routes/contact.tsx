@@ -4,7 +4,7 @@ import { Reveal } from '@/components/site/Reveal';
 import { QuoteForm } from '@/components/site/QuoteForm';
 import { pageHead } from '@/lib/seo';
 export const Route = createFileRoute('/contact')({
-  head: () => pageHead('Get a Free Quote | Ripple Construction Brisbane & Moreton Bay', 'Send Michael your plans, measurements and photos for a free quote on decks, fencing, retaining walls or excavation across Brisbane and Moreton Bay.', '/contact'),
+  head: () => pageHead('Contact & Quotes Brisbane & Moreton Bay | Ripple Construction', 'Send Michael your measurements and photos for a free deck, fence, retaining wall or excavation quote in Brisbane and Moreton Bay. Call 0436 802 414.', '/contact'),
   component: Contact,
 });
 function Contact() {
