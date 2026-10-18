@@ -1,5 +1,5 @@
 # Homeowner-first website
-- [ ] Add Pergolas page, homepage card/headline, navigation, quote choice and SEO/sitemap; verify all enquiry flows.
+- [x] Add Pergolas page, homepage card/headline, navigation, quote choice and SEO/sitemap; verify service selections and successful Pergola enquiry.
 - [ ] Confirm pergola starting price with Michael (not supplied).
 - [x] Update all page metadata and business/FAQ structured data.
 - [x] Optimise images and descriptive alt text; verify sitemap, robots and mobile loading.
