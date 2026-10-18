@@ -1,5 +1,5 @@
 # Homeowner-first website
-- [ ] Match six new job photos and existing photos to galleries; remove unfilled spots and verify image loading.
+- [x] Match six new job photos and existing photos to galleries; remove unfilled spots and verify image loading.
 - [x] Add Pergolas page, homepage card/headline, navigation, quote choice and SEO/sitemap; verify service selections and successful Pergola enquiry.
 - [x] Pergolas published with no starting price (too many variables); shown as priced per job with a free ballpark offer.
 - [x] Update all page metadata and business/FAQ structured data.
