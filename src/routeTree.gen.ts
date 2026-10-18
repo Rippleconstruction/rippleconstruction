@@ -9,62 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WhyChooseRouteImport } from './routes/why-choose'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as RetainingWallsRouteImport } from './routes/retaining-walls'
-import { Route as ProjectsRouteImport } from './routes/projects'
-import { Route as FencingRouteImport } from './routes/fencing'
-import { Route as ExcavationRouteImport } from './routes/excavation'
-import { Route as DecksRouteImport } from './routes/decks'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DecksRouteImport } from './routes/decks'
+import { Route as ExcavationRouteImport } from './routes/excavation'
+import { Route as FencingRouteImport } from './routes/fencing'
+import { Route as ForBuildersRouteImport } from './routes/for-builders'
+import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as RetainingWallsRouteImport } from './routes/retaining-walls'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as WhyChooseRouteImport } from './routes/why-choose'
 import { Route as ApiContactRouteImport } from './routes/api/contact'
 
-const WhyChooseRoute = WhyChooseRouteImport.update({
-  id: '/why-choose',
-  path: '/why-choose',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RetainingWallsRoute = RetainingWallsRouteImport.update({
-  id: '/retaining-walls',
-  path: '/retaining-walls',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FencingRoute = FencingRouteImport.update({
-  id: '/fencing',
-  path: '/fencing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ExcavationRoute = ExcavationRouteImport.update({
-  id: '/excavation',
-  path: '/excavation',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DecksRoute = DecksRouteImport.update({
-  id: '/decks',
-  path: '/decks',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -72,9 +33,54 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DecksRoute = DecksRouteImport.update({
+  id: '/decks',
+  path: '/decks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExcavationRoute = ExcavationRouteImport.update({
+  id: '/excavation',
+  path: '/excavation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FencingRoute = FencingRouteImport.update({
+  id: '/fencing',
+  path: '/fencing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForBuildersRoute = ForBuildersRouteImport.update({
+  id: '/for-builders',
+  path: '/for-builders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetainingWallsRoute = RetainingWallsRouteImport.update({
+  id: '/retaining-walls',
+  path: '/retaining-walls',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyChooseRoute = WhyChooseRouteImport.update({
+  id: '/why-choose',
+  path: '/why-choose',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiContactRoute = ApiContactRouteImport.update({
@@ -90,6 +96,7 @@ export interface FileRoutesByFullPath {
   '/decks': typeof DecksRoute
   '/excavation': typeof ExcavationRoute
   '/fencing': typeof FencingRoute
+  '/for-builders': typeof ForBuildersRoute
   '/projects': typeof ProjectsRoute
   '/retaining-walls': typeof RetainingWallsRoute
   '/services': typeof ServicesRoute
@@ -104,6 +111,7 @@ export interface FileRoutesByTo {
   '/decks': typeof DecksRoute
   '/excavation': typeof ExcavationRoute
   '/fencing': typeof FencingRoute
+  '/for-builders': typeof ForBuildersRoute
   '/projects': typeof ProjectsRoute
   '/retaining-walls': typeof RetainingWallsRoute
   '/services': typeof ServicesRoute
@@ -119,6 +127,7 @@ export interface FileRoutesById {
   '/decks': typeof DecksRoute
   '/excavation': typeof ExcavationRoute
   '/fencing': typeof FencingRoute
+  '/for-builders': typeof ForBuildersRoute
   '/projects': typeof ProjectsRoute
   '/retaining-walls': typeof RetainingWallsRoute
   '/services': typeof ServicesRoute
@@ -135,6 +144,7 @@ export interface FileRouteTypes {
     | '/decks'
     | '/excavation'
     | '/fencing'
+    | '/for-builders'
     | '/projects'
     | '/retaining-walls'
     | '/services'
@@ -149,6 +159,7 @@ export interface FileRouteTypes {
     | '/decks'
     | '/excavation'
     | '/fencing'
+    | '/for-builders'
     | '/projects'
     | '/retaining-walls'
     | '/services'
@@ -163,6 +174,7 @@ export interface FileRouteTypes {
     | '/decks'
     | '/excavation'
     | '/fencing'
+    | '/for-builders'
     | '/projects'
     | '/retaining-walls'
     | '/services'
@@ -178,6 +190,7 @@ export interface RootRouteChildren {
   DecksRoute: typeof DecksRoute
   ExcavationRoute: typeof ExcavationRoute
   FencingRoute: typeof FencingRoute
+  ForBuildersRoute: typeof ForBuildersRoute
   ProjectsRoute: typeof ProjectsRoute
   RetainingWallsRoute: typeof RetainingWallsRoute
   ServicesRoute: typeof ServicesRoute
@@ -188,67 +201,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/why-choose': {
-      id: '/why-choose'
-      path: '/why-choose'
-      fullPath: '/why-choose'
-      preLoaderRoute: typeof WhyChooseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/retaining-walls': {
-      id: '/retaining-walls'
-      path: '/retaining-walls'
-      fullPath: '/retaining-walls'
-      preLoaderRoute: typeof RetainingWallsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fencing': {
-      id: '/fencing'
-      path: '/fencing'
-      fullPath: '/fencing'
-      preLoaderRoute: typeof FencingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/excavation': {
-      id: '/excavation'
-      path: '/excavation'
-      fullPath: '/excavation'
-      preLoaderRoute: typeof ExcavationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/decks': {
-      id: '/decks'
-      path: '/decks'
-      fullPath: '/decks'
-      preLoaderRoute: typeof DecksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -258,11 +215,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/decks': {
+      id: '/decks'
+      path: '/decks'
+      fullPath: '/decks'
+      preLoaderRoute: typeof DecksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/excavation': {
+      id: '/excavation'
+      path: '/excavation'
+      fullPath: '/excavation'
+      preLoaderRoute: typeof ExcavationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fencing': {
+      id: '/fencing'
+      path: '/fencing'
+      fullPath: '/fencing'
+      preLoaderRoute: typeof FencingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/for-builders': {
+      id: '/for-builders'
+      path: '/for-builders'
+      fullPath: '/for-builders'
+      preLoaderRoute: typeof ForBuildersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retaining-walls': {
+      id: '/retaining-walls'
+      path: '/retaining-walls'
+      fullPath: '/retaining-walls'
+      preLoaderRoute: typeof RetainingWallsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-choose': {
+      id: '/why-choose'
+      path: '/why-choose'
+      fullPath: '/why-choose'
+      preLoaderRoute: typeof WhyChooseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/contact': {
@@ -282,6 +302,7 @@ const rootRouteChildren: RootRouteChildren = {
   DecksRoute: DecksRoute,
   ExcavationRoute: ExcavationRoute,
   FencingRoute: FencingRoute,
+  ForBuildersRoute: ForBuildersRoute,
   ProjectsRoute: ProjectsRoute,
   RetainingWallsRoute: RetainingWallsRoute,
   ServicesRoute: ServicesRoute,
