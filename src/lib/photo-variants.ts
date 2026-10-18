@@ -34,7 +34,25 @@ import full16 from '@/assets/speedpanel.webp';
 import small16 from '@/assets/speedpanel-mobile.webp';
 import full17 from '@/assets/wardrobe.webp';
 import small17 from '@/assets/wardrobe-mobile.webp';
+import full18 from '@/assets/timber-deck-balustrade.webp.asset.json';
+import small18 from '@/assets/timber-deck-balustrade-mobile.webp.asset.json';
+import full19 from '@/assets/metal-fence-site-works.webp.asset.json';
+import small19 from '@/assets/metal-fence-site-works-mobile.webp.asset.json';
+import full20 from '@/assets/timber-access-gate.webp.asset.json';
+import small20 from '@/assets/timber-access-gate-mobile.webp.asset.json';
+import full21 from '@/assets/timber-boundary-fence.webp.asset.json';
+import small21 from '@/assets/timber-boundary-fence-mobile.webp.asset.json';
+import full22 from '@/assets/fence-concrete-retaining-wall.webp.asset.json';
+import small22 from '@/assets/fence-concrete-retaining-wall-mobile.webp.asset.json';
+import full23 from '@/assets/chain-wire-fence.webp.asset.json';
+import small23 from '@/assets/chain-wire-fence-mobile.webp.asset.json';
 export const PHOTO_VARIANTS: Record<string, { mobile: string; width: number; height: number }> = {
+  [full18.url]: { mobile: small18.url, width: 1920, height: 1440 },
+  [full19.url]: { mobile: small19.url, width: 1920, height: 1440 },
+  [full20.url]: { mobile: small20.url, width: 1440, height: 1920 },
+  [full21.url]: { mobile: small21.url, width: 1440, height: 1920 },
+  [full22.url]: { mobile: small22.url, width: 1920, height: 1440 },
+  [full23.url]: { mobile: small23.url, width: 1440, height: 1920 },
   [full0]: { mobile: small0, width: 1440, height: 1920 },
   [full1]: { mobile: small1, width: 1440, height: 1920 },
   [full2]: { mobile: small2, width: 1440, height: 1920 },
