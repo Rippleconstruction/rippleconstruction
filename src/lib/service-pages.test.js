@@ -7,4 +7,4 @@ test('retaining wall guide is $350–$600 per m² of wall', () => { expect(SERVI
 test('unconfirmed excavation rate is not invented', () => { expect(SERVICE_PAGES[4].prices[0].min).toBeNull(); expect(SERVICE_PAGES[4].prices[0].max).toBeNull(); });
 test('each service supplies its enquiry job type', () => { expect(SERVICE_PAGES.map(s=>s.jobType)).toEqual(['Deck','Pergola','Fence','Retaining wall','Excavation']); });
 
-test('pergola starting rate remains unconfirmed', () => { expect(SERVICE_PAGES[1].prices[0].min).toBeNull(); expect(SERVICE_PAGES[1].prices[0].max).toBeNull(); });
+test('pergola page publishes no price guide', () => { expect(SERVICE_PAGES[1].prices).toEqual([]); });

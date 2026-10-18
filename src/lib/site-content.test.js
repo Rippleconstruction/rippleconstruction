@@ -5,4 +5,4 @@ test('fencing starts at $130 per metre installed', () => { expect(HOME_SERVICES[
 test('retaining walls start at $350 per m² of wall', () => { expect(HOME_SERVICES[3].price).toBe(350); expect(servicePrice(HOME_SERVICES[3])).toBe('From $350 per m² of wall'); });
 test('excavation is priced per job', () => { expect(HOME_SERVICES[4].price).toBeNull(); expect(servicePrice(HOME_SERVICES[4])).toBe('Priced per job'); });
 
-test('pergola starting price is not invented', () => { expect(HOME_SERVICES[1].price).toBeNull(); expect(servicePrice(HOME_SERVICES[1])).toBe('Starting price per m² installed to be confirmed'); });
+test('pergola card publishes no starting price', () => { expect(HOME_SERVICES[1].price).toBeNull(); expect(servicePrice(HOME_SERVICES[1])).toBe('Priced per job'); });
