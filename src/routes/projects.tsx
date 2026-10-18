@@ -1,39 +1,30 @@
+import { JobPhoto } from '@/components/site/JobPhoto';
+import { pageHead } from '@/lib/seo';
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import project1 from "@/assets/project1.jpg";
-import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import framing from "@/assets/framing.jpg";
-import cladding from "@/assets/cladding.jpg";
-import fitoff from "@/assets/fitoff.jpg";
+import project1 from "@/assets/project1.webp";
+import project2 from "@/assets/project2.webp";
+import project3 from "@/assets/project3.webp";
+import framing from "@/assets/framing.webp";
+import cladding from "@/assets/cladding.webp";
+import fitoff from "@/assets/fitoff.webp";
 
-import fencing from "@/assets/fencing.jpg";
-import hero from "@/assets/hero.jpg";
-import archDoorAsset from "@/assets/arch_door.jpg";
-import featureBeamsAsset from "@/assets/feature_beams.jpg";
-import shedAsset from "@/assets/shed.jpg";
-import speedpanelAsset from "@/assets/speedpanel.jpg";
+import fencing from "@/assets/fencing.webp";
+import hero from "@/assets/hero.webp";
+import archDoorAsset from "@/assets/arch_door.webp";
+import featureBeamsAsset from "@/assets/feature_beams.webp";
+import shedAsset from "@/assets/shed.webp";
+import speedpanelAsset from "@/assets/speedpanel.webp";
 import wardrobeAsset from "@/assets/wardrobe.webp";
-import lawnAsset from "@/assets/lawn_1.jpg";
-import retainingFinishAsset from "@/assets/retaining_wall_finish.jpg";
+import lawnAsset from "@/assets/lawn_1.webp";
+import retainingFinishAsset from "@/assets/retaining_wall_finish.webp";
 
 import { Reveal } from "@/components/site/Reveal";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/projects")({
-  head: () => ({
-    meta: [
-      { title: "Projects — Carpentry Portfolio | Ripple Construction QLD" },
-      { name: "description", content: "Selected carpentry projects by Ripple Construction across Brisbane, Moreton Bay and the Sunshine Coast — framing, cladding, fit-off and renovations." },
-      { property: "og:title", content: "Projects — Ripple Construction" },
-      { property: "og:description", content: "Real deck, fencing, retaining wall and carpentry projects by Ripple Construction." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "/projects" },
-    ],
-    links: [{ rel: "canonical", href: "/projects" }],
-  }),
+  head: () => pageHead('Carpentry Projects Brisbane & Moreton Bay | Ripple Construction', 'View real Ripple Construction job photos: composite decks, timber and Colorbond fences, concrete sleeper walls, framing and internal fit-outs.', '/projects'),
   component: Projects,
 });
 
@@ -41,21 +32,21 @@ type Cat = "All" | "Framing" | "Cladding" | "Fit-Off" | "Decks" | "Fencing" | "R
 const CATS: Cat[] = ["All", "Framing", "Cladding", "Fit-Off", "Decks", "Fencing", "Retaining Walls", "Commercial", "Landscaping"];
 
 const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: string; alt: string }[] = [
-  { title: "Arched Timber Entry Doors", cat: "Fit-Off", img: archDoorAsset, location: "Brisbane", alt: "Custom arched timber double entry doors installed in a new home" },
-  { title: "Exposed Feature Beams", cat: "Fit-Off", img: featureBeamsAsset, location: "Sunshine Coast", alt: "Exposed timber feature beams and posts with steel brackets in an open-plan living area" },
-  { title: "Steel Shed Frame", cat: "Commercial", img: shedAsset, location: "Moreton Bay", alt: "Structural steel shed frame erected on a new concrete slab" },
-  { title: "Speedpanel Wall System", cat: "Commercial", img: speedpanelAsset, location: "Brisbane CBD", alt: "Speedpanel wall panels stacked on an elevated commercial site above the city skyline" },
-  { title: "Built-In Wardrobe", cat: "Fit-Off", img: wardrobeAsset, location: "Brisbane", alt: "Finished built-in wardrobe with white shelving, hanging rails and recessed lighting" },
-  { title: "Concrete Sleeper Retaining Wall", cat: "Retaining Walls", img: retainingFinishAsset, location: "Sunshine Coast", alt: "Finished concrete sleeper retaining wall supporting a fenced property boundary" },
-  { title: "Site Finish & Garden Edging", cat: "Landscaping", img: lawnAsset, location: "Moreton Bay", alt: "Completed lawn with curved mulched garden beds and timber edging around a raised home" },
-  { title: "Custom Internal Fitout", cat: "Fit-Off", img: project3, location: "Brisbane", alt: "Internal fitout in progress with steel wall framing, linings and service openings" },
-  { title: "Composite Deck & Stairs", cat: "Decks", img: project1, location: "Buderim", alt: "Composite decking with timber stairs at a residential home" },
-  { title: "Colourbond Boundary Fencing", cat: "Fencing", img: project2, location: "Caboolture", alt: "Colourbond boundary fencing installed along a residential property line" },
-  { title: "Estate Framing Package", cat: "Framing", img: hero, location: "North Lakes", alt: "Timber wall and floor framing on a new residential slab" },
-  { title: "Floor & Roof Framing", cat: "Framing", img: framing, location: "Brisbane", alt: "Timber floor and roof framing with steel beams on a new build" },
-  { title: "Architectural Cladding", cat: "Cladding", img: cladding, location: "Newstead", alt: "Architectural cladding installed on a modern facade" },
-  { title: "Hybrid Flooring Install", cat: "Fit-Off", img: fitoff, location: "Brisbane", alt: "Hybrid timber-look flooring installed through a finished interior" },
-  { title: "Timber Fencing", cat: "Fencing", img: fencing, location: "Moreton Bay", alt: "New timber paling fence built along a residential boundary" },
+  { title: "Arched Timber Entry Doors", cat: "Fit-Off", img: archDoorAsset, location: "Not recorded", alt: "Custom arched timber double entry doors installed in a new home" },
+  { title: "Exposed Feature Beams", cat: "Fit-Off", img: featureBeamsAsset, location: "Not recorded", alt: "Exposed timber feature beams and posts with steel brackets in an open-plan living area" },
+  { title: "Steel Shed Frame", cat: "Commercial", img: shedAsset, location: "Not recorded", alt: "Structural steel shed frame erected on a new concrete slab" },
+  { title: "Speedpanel Wall System", cat: "Commercial", img: speedpanelAsset, location: "Not recorded", alt: "Speedpanel wall panels stacked on an elevated commercial site above the city skyline" },
+  { title: "Built-In Wardrobe", cat: "Fit-Off", img: wardrobeAsset, location: "Not recorded", alt: "Finished built-in wardrobe with white laminated shelving, hanging rails and recessed lighting" },
+  { title: "Concrete Sleeper Retaining Wall", cat: "Retaining Walls", img: retainingFinishAsset, location: "Not recorded", alt: "Finished concrete sleeper retaining wall supporting a fenced property boundary" },
+  { title: "Site Finish & Garden Edging", cat: "Landscaping", img: lawnAsset, location: "Not recorded", alt: "Completed lawn with curved mulched garden beds and timber edging around a raised home" },
+  { title: "Custom Internal Fitout", cat: "Fit-Off", img: project3, location: "Not recorded", alt: "Internal fitout in progress with steel wall framing, linings and service openings" },
+  { title: "Composite Deck & Stairs", cat: "Decks", img: project1, location: "Not recorded", alt: "Composite decking with timber stairs at a residential home" },
+  { title: "Colourbond Boundary Fencing", cat: "Fencing", img: project2, location: "Not recorded", alt: "Colourbond boundary fencing installed along a residential property line" },
+  { title: "Estate Framing Package", cat: "Framing", img: hero, location: "Not recorded", alt: "Timber wall and floor framing on a new residential slab" },
+  { title: "Floor & Roof Framing", cat: "Framing", img: framing, location: "Not recorded", alt: "Timber floor and roof framing with steel beams on a new build" },
+  { title: "Architectural Cladding", cat: "Cladding", img: cladding, location: "Not recorded", alt: "Horizontal external cladding on a raised home" },
+  { title: "Hybrid Flooring Install", cat: "Fit-Off", img: fitoff, location: "Not recorded", alt: "Hybrid timber-look flooring installed through a finished interior" },
+  { title: "Timber Fencing", cat: "Fencing", img: fencing, location: "Not recorded", alt: "New timber paling fence built along a residential boundary" },
   
 ];
 
@@ -106,7 +97,7 @@ function Projects() {
               <Reveal key={p.title + i} delay={(i % 3) * 80}>
                 <article className="group overflow-hidden rounded-2xl bg-card border border-border">
                   <div className="relative aspect-[4/5] overflow-hidden">
-                    <img src={p.img} alt={p.alt} loading="lazy" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <JobPhoto src={p.img} alt={p.alt} loading="lazy" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" width={1400} height={1000} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute top-4 left-4 rounded-full bg-[var(--bone)]/95 text-[var(--ink)] px-3 py-1 text-xs font-semibold">
                       {p.cat}
                     </div>
