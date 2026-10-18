@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep homeowner services in shared service data and individual public routes; preserve legacy public URLs so existing links remain valid.
+- Use one shared quote form and validated multipart contact endpoint; store enquiries and photos privately with server-only privileged access because submissions contain personal information.
+- Send quote notifications through the existing Resend integration with a fixed recipient, customer Reply-To and validated image attachments; only confirm success after the provider returns an email ID.
+- Keep unconfirmed project measurements, suburbs and build times explicitly unknown; separate sample reviews from genuine reviews to avoid misleading visitors.
