@@ -1,4 +1,4 @@
-import { AREAS, GOOGLE_PROFILE } from './site-content';
+import { AREAS, GOOGLE_PROFILE, HOME_SERVICES } from './site-content';
 export const SITE_URL = 'https://www.rippleconstruction.com.au';
 export const BUSINESS_SCHEMA = {
   '@context': 'https://schema.org',
@@ -10,6 +10,13 @@ export const BUSINESS_SCHEMA = {
   url: SITE_URL,
   areaServed: ['Brisbane', 'Moreton Bay', ...AREAS].map(name => ({ '@type': 'Place', name })),
   sameAs: ['https://www.instagram.com/ripple.construction', GOOGLE_PROFILE],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog', name: 'Homeowner services',
+    itemListElement: HOME_SERVICES.map(service => ({ '@type': 'Offer', itemOffered: {
+      '@type': 'Service', name: service.title, serviceType: service.title,
+      description: service.description, url: `${SITE_URL}${service.to}`,
+    } })),
+  },
 };
 type FAQ = { question: string; answer: string };
 export function faqSchema(faqs: readonly FAQ[], path: string) {

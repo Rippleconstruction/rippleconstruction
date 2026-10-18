@@ -8,7 +8,7 @@ describe('Quote enquiry rules', () => {
     expect(validatePhotoSelection(Array(6).fill(photo))).not.toBeNull();
   });
   test('only accepts the requested job types', () => {
-    for (const jobType of ['Deck', 'Fence', 'Retaining wall', 'Excavation', 'Other']) expect(quoteSchema.safeParse({ ...valid, jobType }).success).toBe(true);
+    for (const jobType of ['Deck', 'Pergola', 'Fence', 'Retaining wall', 'Excavation', 'Other']) expect(quoteSchema.safeParse({ ...valid, jobType }).success).toBe(true);
     expect(quoteSchema.safeParse({ ...valid, jobType: 'Unlisted' }).success).toBe(false);
   });
   test('only accepts the requested timeframes', () => {
@@ -28,3 +28,5 @@ describe('Quote enquiry rules', () => {
     expect(isValidImage(new Uint8Array([60,104,116,109,108]), 'image/jpeg')).toBe(false);
   });
 });
+
+test('accepts a Pergola enquiry', () => { expect(quoteSchema.parse({ ...valid, jobType: 'Pergola' }).jobType).toBe('Pergola'); });
