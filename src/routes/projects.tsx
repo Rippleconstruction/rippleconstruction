@@ -1,5 +1,6 @@
 import { JobPhoto } from '@/components/site/JobPhoto';
 import { pageHead } from '@/lib/seo';
+import { NEW_JOB_PHOTOS } from '@/lib/service-gallery';
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
@@ -31,7 +32,13 @@ export const Route = createFileRoute("/projects")({
 type Cat = "All" | "Framing" | "Cladding" | "Fit-Off" | "Decks" | "Fencing" | "Retaining Walls" | "Commercial" | "Landscaping";
 const CATS: Cat[] = ["All", "Framing", "Cladding", "Fit-Off", "Decks", "Fencing", "Retaining Walls", "Commercial", "Landscaping"];
 
-const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: string; alt: string }[] = [
+const ITEMS: { title: string; cat: Exclude<Cat, "All">; img: string; location: string; alt: string; materials?: string }[] = [
+  { ...NEW_JOB_PHOTOS.deckRail, img: NEW_JOB_PHOTOS.deckRail.src, cat: "Decks", location: "Not recorded", materials: "Timber decking, timber trim and balustrade panels" },
+  { ...NEW_JOB_PHOTOS.siteWorks, img: NEW_JOB_PHOTOS.siteWorks.src, cat: "Landscaping", location: "Not recorded", materials: "Metal fence panels, concrete retaining edge and earthworks" },
+  { ...NEW_JOB_PHOTOS.gate, img: NEW_JOB_PHOTOS.gate.src, cat: "Fencing", location: "Not recorded", materials: "Timber palings" },
+  { ...NEW_JOB_PHOTOS.fence, img: NEW_JOB_PHOTOS.fence.src, cat: "Fencing", location: "Not recorded", materials: "Timber palings" },
+  { ...NEW_JOB_PHOTOS.wall, img: NEW_JOB_PHOTOS.wall.src, cat: "Retaining Walls", location: "Not recorded", materials: "Concrete sleepers, steel posts and timber palings" },
+  { ...NEW_JOB_PHOTOS.chainWire, img: NEW_JOB_PHOTOS.chainWire.src, cat: "Fencing", location: "Not recorded", materials: "Chain-wire mesh, metal posts and wire strands" },
   { title: "Arched Timber Entry Doors", cat: "Fit-Off", img: archDoorAsset, location: "Not recorded", alt: "Custom arched timber double entry doors installed in a new home" },
   { title: "Exposed Feature Beams", cat: "Fit-Off", img: featureBeamsAsset, location: "Not recorded", alt: "Exposed timber feature beams and posts with steel brackets in an open-plan living area" },
   { title: "Steel Shed Frame", cat: "Commercial", img: shedAsset, location: "Not recorded", alt: "Structural steel shed frame erected on a new concrete slab" },
@@ -106,10 +113,7 @@ function Projects() {
                     <div className="text-xs uppercase tracking-widest text-muted-foreground">{p.cat}</div>
                     <h2 className="mt-2 font-display text-xl font-bold">{p.title}</h2>
                     <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 text-sm">
-                      <dt className="text-muted-foreground">Suburb</dt><dd>Not recorded</dd>
-                      <dt className="text-muted-foreground">Size</dt><dd>Not recorded</dd>
-                      <dt className="text-muted-foreground">Materials</dt><dd>{p.cat === 'Decks' ? 'Decking boards and fascia' : p.cat === 'Fencing' ? (p.title.includes('Colourbond') ? 'Colorbond panels' : 'Timber palings') : p.cat === 'Retaining Walls' ? 'Concrete sleepers and steel posts' : p.cat === 'Landscaping' ? 'Turf, mulch and timber edging' : 'As shown in photo'}</dd>
-                      <dt className="text-muted-foreground">Build time</dt><dd>Not recorded</dd>
+                      <dt className="text-muted-foreground">Materials</dt><dd>{p.materials ?? (p.cat === 'Decks' ? 'Decking boards and fascia' : p.cat === 'Fencing' ? (p.title.includes('Colourbond') ? 'Colorbond panels' : 'Timber palings') : p.cat === 'Retaining Walls' ? 'Concrete sleepers and steel posts' : p.cat === 'Landscaping' ? 'Turf, mulch and timber edging' : 'As shown in photo')}</dd>
                     </dl>
                   </div>
                 </article>

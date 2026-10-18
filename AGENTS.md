@@ -9,9 +9,9 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Keep homeowner services in shared service data and individual public routes; render detailed service copy, price guides, gallery slots and FAQs through the shared service-page layout so all service pages stay consistent. Preserve legacy public URLs so existing links remain valid. Use labelled photo placeholders when no verified service photo exists rather than misrepresenting another job.
+- Keep homeowner services in shared service data and individual public routes; render detailed service copy, price guides and FAQs through the shared service-page layout so pages stay consistent. Preserve legacy public URLs. Use the shared service-gallery photo catalogue for verified gallery matches and omit empty galleries to avoid misrepresenting jobs or showing incomplete slots.
 - Use one shared quote form and validated multipart contact endpoint; store enquiries and photos privately with server-only privileged access because submissions contain personal information.
 - Send quote notifications through the existing Resend integration with a fixed recipient, customer Reply-To and validated image attachments; only confirm success after the provider returns an email ID.
 - Keep unconfirmed project measurements, suburbs and build times explicitly unknown; separate sample reviews from genuine reviews to avoid misleading visitors.
 - Use the shared pageHead helper for leaf metadata and business JSON-LD; derive service FAQ JSON-LD from the displayed FAQ data to prevent mismatched answers.
-- Render bundled job photos through JobPhoto with desktop/mobile WebP variants and intrinsic dimensions; keep hero photos eager and below-the-fold photos lazy to reduce mobile downloads without changing layout.
+- Render job photos through JobPhoto with desktop/mobile WebP variants and intrinsic dimensions; store new uploaded media as CDN asset pointers and keep hero photos eager and below-the-fold photos lazy to reduce mobile downloads.
