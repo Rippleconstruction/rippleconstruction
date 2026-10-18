@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const JOB_TYPES = ['Deck', 'Fence', 'Retaining wall', 'Excavation', 'Other'] as const;
+export const JOB_TYPES = ['Deck', 'Pergola', 'Fence', 'Retaining wall', 'Excavation', 'Other'] as const;
 export const TIMEFRAMES = ['ASAP', 'Within 1 month', '1–3 months', 'Just getting prices'] as const;
 export const MAX_PHOTOS = 5;
 export const MAX_PHOTO_BYTES = 2 * 1024 * 1024;
