@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { JOB_TYPES, TIMEFRAMES, quoteSchema, validatePhotoSelection } from '@/lib/quote-schema';
 
 const fieldClass = 'mt-2 w-full rounded-lg border border-input bg-background px-4 py-3 text-foreground outline-none focus:border-timber';
-export function QuoteForm() {
+export function QuoteForm({ defaultJobType = '' }: { defaultJobType?: typeof JOB_TYPES[number] | '' }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -43,7 +43,7 @@ export function QuoteForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         {([{ name: 'name', label: 'Name', type: 'text', max: 100 }, { name: 'phone', label: 'Phone', type: 'tel', max: 30 }, { name: 'email', label: 'Email', type: 'email', max: 255 }, { name: 'suburb', label: 'Suburb', type: 'text', max: 100 }]).map(f => <label key={f.name} className="text-sm font-medium">{f.label} *<input name={f.name} type={f.type} maxLength={f.max} required autoComplete={f.name === 'name' ? 'name' : f.name === 'phone' ? 'tel' : f.name === 'email' ? 'email' : 'address-level2'} className={fieldClass} aria-invalid={Boolean(errors[f.name])} />{errors[f.name] && <span className="mt-1 block text-sm text-destructive">{errors[f.name]}</span>}</label>)}
       </div>
-      <label className="text-sm font-medium">Job type *<select name="jobType" defaultValue="" required className={fieldClass}><option value="" disabled>Select a job type…</option>{JOB_TYPES.map(t => <option key={t}>{t}</option>)}</select>{errors.jobType && <span className="mt-1 block text-destructive">{errors.jobType}</span>}</label>
+      <label className="text-sm font-medium">Job type *<select name="jobType" defaultValue={defaultJobType} required className={fieldClass}><option value="" disabled>Select a job type…</option>{JOB_TYPES.map(t => <option key={t}>{t}</option>)}</select>{errors.jobType && <span className="mt-1 block text-destructive">{errors.jobType}</span>}</label>
       <label className="text-sm font-medium">Approximate size<input name="approximateSize" maxLength={150} placeholder="e.g. 5m x 4m or 30 metres" className={fieldClass} />{errors.approximateSize && <span className="mt-1 block text-destructive">{errors.approximateSize}</span>}</label>
       <label className="text-sm font-medium">Message *<textarea name="message" rows={5} maxLength={2000} required placeholder="Tell us about the job, site access and what you have in mind…" className={fieldClass} />{errors.message && <span className="mt-1 block text-destructive">{errors.message}</span>}</label>
       <label className="text-sm font-medium"><span className="flex items-center gap-2"><ImagePlus className="h-4 w-4" />Photo upload</span><input name="photos" type="file" accept="image/jpeg,image/png,image/webp" multiple className={`${fieldClass} text-sm`} onChange={e => { const files = Array.from(e.target.files ?? []); setPhotoNames(files.map(f => f.name)); const error = validatePhotoSelection(files); setErrors(old => ({ ...old, photos: error ?? '' })); }} /><span className="mt-2 block text-xs text-muted-foreground">Up to 5 images · JPG, PNG or WebP · 2 MB per image</span>{photoNames.length > 0 && <span className="mt-1 block break-words text-xs text-muted-foreground">{photoNames.join(' · ')}</span>}{errors.photos && <span role="alert" className="mt-1 block text-destructive">{errors.photos}</span>}</label>
