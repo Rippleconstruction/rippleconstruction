@@ -18,3 +18,5 @@ test('FAQ schema uses the actual five answers for each service', () => {
   expect(schema.mainEntity.map(q=>({question:q.name,answer:q.acceptedAnswer.text}))).toEqual(service.faqs);
  }
 });
+
+test('business service catalogue includes Pergolas', () => { expect(BUSINESS_SCHEMA.hasOfferCatalog.itemListElement.map(offer=>offer.itemOffered.name)).toEqual(['Decks','Pergolas','Fencing','Retaining Walls','Excavation & Site Prep']); });

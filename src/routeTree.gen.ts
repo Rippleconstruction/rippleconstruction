@@ -16,6 +16,7 @@ import { Route as DecksRouteImport } from './routes/decks'
 import { Route as ExcavationRouteImport } from './routes/excavation'
 import { Route as FencingRouteImport } from './routes/fencing'
 import { Route as ForBuildersRouteImport } from './routes/for-builders'
+import { Route as PergolasRouteImport } from './routes/pergolas'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as RetainingWallsRouteImport } from './routes/retaining-walls'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -58,6 +59,11 @@ const ForBuildersRoute = ForBuildersRouteImport.update({
   path: '/for-builders',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PergolasRoute = PergolasRouteImport.update({
+  id: '/pergolas',
+  path: '/pergolas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsRoute = ProjectsRouteImport.update({
   id: '/projects',
   path: '/projects',
@@ -97,6 +103,7 @@ export interface FileRoutesByFullPath {
   '/excavation': typeof ExcavationRoute
   '/fencing': typeof FencingRoute
   '/for-builders': typeof ForBuildersRoute
+  '/pergolas': typeof PergolasRoute
   '/projects': typeof ProjectsRoute
   '/retaining-walls': typeof RetainingWallsRoute
   '/services': typeof ServicesRoute
@@ -112,6 +119,7 @@ export interface FileRoutesByTo {
   '/excavation': typeof ExcavationRoute
   '/fencing': typeof FencingRoute
   '/for-builders': typeof ForBuildersRoute
+  '/pergolas': typeof PergolasRoute
   '/projects': typeof ProjectsRoute
   '/retaining-walls': typeof RetainingWallsRoute
   '/services': typeof ServicesRoute
@@ -128,6 +136,7 @@ export interface FileRoutesById {
   '/excavation': typeof ExcavationRoute
   '/fencing': typeof FencingRoute
   '/for-builders': typeof ForBuildersRoute
+  '/pergolas': typeof PergolasRoute
   '/projects': typeof ProjectsRoute
   '/retaining-walls': typeof RetainingWallsRoute
   '/services': typeof ServicesRoute
@@ -145,6 +154,7 @@ export interface FileRouteTypes {
     | '/excavation'
     | '/fencing'
     | '/for-builders'
+    | '/pergolas'
     | '/projects'
     | '/retaining-walls'
     | '/services'
@@ -160,6 +170,7 @@ export interface FileRouteTypes {
     | '/excavation'
     | '/fencing'
     | '/for-builders'
+    | '/pergolas'
     | '/projects'
     | '/retaining-walls'
     | '/services'
@@ -175,6 +186,7 @@ export interface FileRouteTypes {
     | '/excavation'
     | '/fencing'
     | '/for-builders'
+    | '/pergolas'
     | '/projects'
     | '/retaining-walls'
     | '/services'
@@ -191,6 +203,7 @@ export interface RootRouteChildren {
   ExcavationRoute: typeof ExcavationRoute
   FencingRoute: typeof FencingRoute
   ForBuildersRoute: typeof ForBuildersRoute
+  PergolasRoute: typeof PergolasRoute
   ProjectsRoute: typeof ProjectsRoute
   RetainingWallsRoute: typeof RetainingWallsRoute
   ServicesRoute: typeof ServicesRoute
@@ -250,6 +263,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ForBuildersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pergolas': {
+      id: '/pergolas'
+      path: '/pergolas'
+      fullPath: '/pergolas'
+      preLoaderRoute: typeof PergolasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects': {
       id: '/projects'
       path: '/projects'
@@ -303,6 +323,7 @@ const rootRouteChildren: RootRouteChildren = {
   ExcavationRoute: ExcavationRoute,
   FencingRoute: FencingRoute,
   ForBuildersRoute: ForBuildersRoute,
+  PergolasRoute: PergolasRoute,
   ProjectsRoute: ProjectsRoute,
   RetainingWallsRoute: RetainingWallsRoute,
   ServicesRoute: ServicesRoute,
